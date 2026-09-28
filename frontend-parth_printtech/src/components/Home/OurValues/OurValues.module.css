@@ -1,0 +1,230 @@
+.section {
+    padding: 30px 40px;
+    background-color: #fafbfc;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Interactive Background Graphics (matching Who We Are style) */
+.interactiveBg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Below content elements */
+  overflow: hidden;
+}
+
+.floatShape {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  transition: opacity 0.5s ease;
+}
+
+.section:hover .floatShape {
+  opacity: 0.15; /* Becomes slightly more visible on section hover */
+}
+
+.shape1 {
+  /* Abstract Overlapping Circles (Color Mixing / CMYK Concept) */
+  top: 10%; left: 3%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="60" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="50" cy="60" r="30" fill="none" stroke="%23009fe3" stroke-width="1.5"/></svg>');
+}
+
+.shape2 {
+  /* Abstract Minimalist Packaging Box / Outline */
+  bottom: 5%; right: 2%;
+  width: 420px; height: 420px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="none" stroke="%23009fe3" stroke-width="1"/><path d="M 100 20 L 100 100 M 20 60 L 100 100 M 180 60 L 100 100" fill="none" stroke="%23009fe3" stroke-width="1"/></svg>');
+  transform: rotate(45deg);
+}
+
+.shape3 {
+  /* Die-cut Label Outline with Dashed lines */
+  top: 45%; left: 45%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="25" width="70" height="50" rx="15" fill="none" stroke="%23009fe3" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="85" cy="50" r="5" fill="%23009fe3"/></svg>');
+  transform: rotate(-15deg);
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+}
+
+.subtitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-geist-mono), monospace;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #6c757d;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.blueDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #009fe3;
+    box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111;
+    margin-bottom: 30px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.outlinedText {
+    color: #009fe3;
+    position: relative;
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.description {
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    font-size: 1.2rem;
+    color: #495057;
+    line-height: 1.7;
+}
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Glassmorphic Value card */
+.card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 40px 30px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), backdrop-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 25px 50px rgba(0, 159, 227, 0.08);
+    border-color: rgba(0, 159, 227, 0.25);
+    transition: border-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), backdrop-filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.iconContainer {
+    margin-bottom: 28px;
+    display: flex;
+}
+
+.iconCircle {
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background-color: rgba(0, 159, 227, 0.06);
+    color: #009fe3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover .iconCircle {
+    background-color: #009fe3;
+    color: #ffffff;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.cardTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    font-family: var(--font-montserrat), system-ui, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.cardDesc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #666666;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    margin: 0;
+}
+
+/* Ambient glow card hover effect */
+.cardBackgroundEffect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 159, 227, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.card:hover .cardBackgroundEffect {
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    .title {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 80px 20px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .header {
+        margin-bottom: 50px;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+}

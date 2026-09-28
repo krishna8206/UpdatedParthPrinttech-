@@ -1,0 +1,257 @@
+.section {
+  padding: 100px 40px;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, rgba(0, 159, 227, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.registrationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.regMark {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 159, 227, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.regMarkCircle {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(0, 159, 227, 0.3);
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #009fe3;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  background-color: #009fe3;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 159, 227, 0.5);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.accentText {
+  color: #009fe3;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Card Container for 1 Image + 2 Names */
+.foundersCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  background: #ffffff;
+  border: 1fr solid #e2e8f0;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+}
+
+/* Image Column (1 Single Image) */
+.imageColumn {
+  width: 100%;
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  background-color: #f1f5f9;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.founderImage {
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.imageFrame:hover .founderImage {
+  transform: scale(1.03);
+}
+
+.imageOverlayBadge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Details Column (2 Names + Descriptions) */
+.detailsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.founderBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.founderHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.founderIndex {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #009fe3;
+  background: rgba(0, 159, 227, 0.08);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 159, 227, 0.2);
+}
+
+.founderName {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.founderRole {
+  display: block;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #009fe3;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+.founderDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  padding-left: 60px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #e2e8f0 0%, #cbd5e1 50%, #e2e8f0 100%);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .foundersCard {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section {
+    padding: 60px 20px;
+  }
+
+  .title {
+    font-size: 2.1rem;
+  }
+
+  .founderDesc {
+    padding-left: 0;
+  }
+
+  .foundersCard {
+    padding: 20px;
+    border-radius: 18px;
+  }
+}

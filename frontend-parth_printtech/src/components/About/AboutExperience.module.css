@@ -1,0 +1,240 @@
+.section {
+  padding: 120px 40px;
+  background-color: #fafbfc;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Blueprint drafting line background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Print alignment markers */
+.registrationOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.regMark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  color: rgba(0, 159, 227, 0.15);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.regMark::before,
+.regMark::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+}
+
+.regMark::before {
+  width: 100%;
+  height: 1px;
+}
+
+.regMark::after {
+  width: 1px;
+  height: 100%;
+}
+
+.regMarkCircle {
+  width: 14px;
+  height: 14px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 25px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.accentText {
+  color: #009fe3;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #495057;
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 159, 227, 0.25);
+  box-shadow: 0 20px 45px rgba(0, 159, 227, 0.05);
+  transition: border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Icon Wrapper */
+.iconContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background-color: rgba(0, 159, 227, 0.06);
+  color: #009fe3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.35s ease;
+}
+
+.cardIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.card:hover .iconContainer {
+  background-color: #009fe3;
+  color: #ffffff;
+}
+
+/* Typography */
+.cardTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+  flex-grow: 1; /* Pushes specs to bottom evenly */
+}
+
+/* Spec list */
+.specificationsList {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.specItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.specLabel {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.specValue {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .card {
+    padding: 35px 25px;
+  }
+}

@@ -1,0 +1,334 @@
+.section {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  color: #111827;
+}
+
+.blueprintOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(0, 159, 227, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.registrationOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.regMark {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-top: 1px solid rgba(0, 159, 227, 0.3);
+  border-left: 1px solid rgba(0, 159, 227, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.regMarkCircle {
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgba(0, 159, 227, 0.4);
+  border-radius: 50%;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Main Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #009fe3;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  background-color: #009fe3;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.accentText {
+  color: #009fe3;
+  position: relative;
+  display: inline-block;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 16px;
+}
+
+.bodyText {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+  margin-bottom: 36px;
+}
+
+/* Metrics Row */
+.metricsRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricVal {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #009fe3;
+  line-height: 1;
+}
+
+.metricLbl {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metricDivider {
+  width: 1px;
+  height: 36px;
+  background: #cbd5e1;
+}
+
+/* Right Column & Image Frame */
+.rightCol {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 159, 227, 0.15);
+  border: 1px solid rgba(0, 159, 227, 0.2);
+}
+
+.wireframeBorder {
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.facilityImage {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.imageFrame:hover .facilityImage {
+  transform: scale(1.03);
+}
+
+.glassBadge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  padding: 16px 20px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.badgePulse {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse 2s infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.badgeTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.badgeSub {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin: 2px 0 0 0;
+}
+
+/* Highlights Grid */
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px 24px;
+  transition: all 0.35s ease;
+  position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #009fe3;
+  box-shadow: 0 20px 25px -5px rgba(0, 159, 227, 0.1), 0 8px 10px -6px rgba(0, 159, 227, 0.04);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: rgba(0, 159, 227, 0.08);
+  color: #009fe3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  background: #009fe3;
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facilityImage {
+    height: 380px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .metricsRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .metricDivider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .facilityImage {
+    height: 280px;
+  }
+}

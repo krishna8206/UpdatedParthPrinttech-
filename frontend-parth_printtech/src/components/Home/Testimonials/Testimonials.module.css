@@ -1,0 +1,386 @@
+.section {
+  padding: 120px 0;
+  background-color: #f8f9fa; /* Seamless integration with homepage layout */
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Interactive Background Graphics (matching Who We Are & Products style) */
+.interactiveBg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Below content elements */
+  overflow: hidden;
+}
+
+.floatShape {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  transition: opacity 0.5s ease;
+}
+
+.section:hover .floatShape {
+  opacity: 0.15; /* Becomes slightly more visible on section hover */
+}
+
+.shape1 {
+  /* Abstract Overlapping Circles (Color Mixing / CMYK Concept) */
+  top: 10%; left: 3%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="60" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="50" cy="60" r="30" fill="none" stroke="%23009fe3" stroke-width="1.5"/></svg>');
+}
+
+.shape2 {
+  /* Abstract Minimalist Packaging Box / Outline */
+  bottom: 5%; right: 2%;
+  width: 420px; height: 420px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="none" stroke="%23009fe3" stroke-width="1"/><path d="M 100 20 L 100 100 M 20 60 L 100 100 M 180 60 L 100 100" fill="none" stroke="%23009fe3" stroke-width="1"/></svg>');
+  transform: rotate(45deg);
+}
+
+.shape3 {
+  /* Die-cut Label Outline with Dashed lines */
+  top: 45%; left: 45%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="25" width="70" height="50" rx="15" fill="none" stroke="%23009fe3" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="85" cy="50" r="5" fill="%23009fe3"/></svg>');
+  transform: rotate(-15deg);
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  padding: 0 40px;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 30px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.outlinedText {
+  color: #009fe3;
+  position: relative;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Marquees Section Wrapper with linear fade-out masks on the edges */
+.marqueesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 100%;
+  position: relative;
+  /* Left & Right gradient fade overlay to blend marquee into edges */
+  mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, rgba(0, 0, 0, 1) 12%, rgba(0, 0, 0, 1) 88%, transparent);
+}
+
+.marqueeContainer {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  --marquee-gap: 30px;
+}
+
+.marquee {
+  display: flex;
+  gap: var(--marquee-gap);
+  width: max-content;
+  will-change: transform;
+  flex-shrink: 0;
+  padding-right: var(--marquee-gap);
+}
+
+.marqueeLeft {
+  animation: scrollLeft 45s linear infinite;
+}
+
+.marqueeRight {
+  animation: scrollRight 45s linear infinite;
+}
+
+/* Pause scroll when user hovers so they can read */
+.marqueeContainer:hover .marquee {
+  animation-play-state: paused;
+}
+
+/* Testimonial Card Styling */
+.card {
+  flex-shrink: 0;
+  width: 440px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background: #ffffff;
+  border-color: rgba(0, 159, 227, 0.25);
+  box-shadow: 0 25px 50px rgba(0, 159, 227, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.cardHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  color: #ffffff;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+}
+
+.clientName {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.clientMeta {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.companyName {
+  font-weight: 700;
+  color: #009fe3;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.quote {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0 0 10px 0;
+  font-style: italic;
+}
+
+/* CMYK dots decoration in bottom right corner */
+.cmykCorner {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  display: flex;
+  gap: 4px;
+  opacity: 0.25;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .cmykCorner {
+  opacity: 0.75;
+}
+
+.dotCyan, .dotMagenta, .dotYellow {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dotCyan { background-color: #009fe3; }
+.dotMagenta { background-color: #e3007b; }
+.dotYellow { background-color: #ffd400; }
+
+/* Marquee Keyframes (Twin track translation) */
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .title {
+    font-size: 3rem;
+  }
+  .card {
+    width: 380px;
+    padding: 30px 24px;
+  }
+  .quote {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .description {
+    font-size: 1.05rem;
+  }
+  .marqueesWrapper {
+    gap: 20px;
+  }
+  .card {
+    width: 320px;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 0;
+  }
+  .header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  .subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  .marqueesWrapper {
+    gap: 12px;
+  }
+  .marqueeContainer {
+    --marquee-gap: 15px;
+  }
+  .card {
+    width: 240px;
+    padding: 16px 14px;
+    border-radius: 14px;
+  }
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  .clientName {
+    font-size: 0.82rem;
+  }
+  .clientMeta {
+    font-size: 0.7rem;
+  }
+  .quote {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+  .stars {
+    margin-top: 0;
+  }
+  .stars svg {
+    width: 10px;
+    height: 10px;
+  }
+  .cmykCorner {
+    bottom: 12px;
+    right: 14px;
+  }
+}

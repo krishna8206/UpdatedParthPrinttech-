@@ -1,0 +1,563 @@
+.mainContainer {
+  padding: 180px 40px 120px 40px;
+  background-color: #fafbfc;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Blueprint drafting line background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image: 
+    linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 80px auto;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.headline {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.accentText {
+  color: #009fe3;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #6c757d;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* 2 Column Layout */
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Column Info Cards */
+.infoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.infoCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.infoCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 30px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 159, 227, 0.25);
+  box-shadow: 0 15px 35px rgba(0, 159, 227, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.cardIcon {
+  width: 20px;
+  height: 20px;
+  color: #009fe3;
+}
+
+.cardTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 750;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.cardLink {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.cardLink:hover {
+  color: #009fe3;
+}
+
+.cardHint {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin: 6px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Response time card overlay */
+.responseCard {
+  background-color: #0f172a;
+  border-color: #1e293b;
+}
+
+.responseCard:hover {
+  border-color: rgba(0, 159, 227, 0.4);
+}
+
+.responseCard .cardTitle {
+  color: #f1f5f9;
+}
+
+.responseTimeValue {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #009fe3;
+  margin-bottom: 8px;
+}
+
+/* Stylized blueprint map card */
+.mapCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.mapVisual {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: #0b0f19;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapGridLines {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  opacity: 0.08;
+  background-image: 
+    linear-gradient(to right, #009fe3 1px, transparent 1px),
+    linear-gradient(to bottom, #009fe3 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.mapHotspot {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.mapDot {
+  position: absolute;
+  top: 8px; left: 8px;
+  width: 8px; height: 8px;
+  background-color: #009fe3;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #009fe3;
+}
+
+.mapPulse {
+  position: absolute;
+  top: 0; left: 0;
+  width: 24px; height: 24px;
+  background-color: rgba(0, 159, 227, 0.25);
+  border-radius: 50%;
+  animation: pulsePin 2s infinite;
+}
+
+@keyframes pulsePin {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.mapDetailsText {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapCity {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+
+.mapState {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.65rem;
+  color: #009fe3;
+  text-transform: uppercase;
+}
+
+.mapCardFooter {
+  padding: 24px 28px;
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.mapAddress {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.mapLink {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #009fe3;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.mapLink:hover {
+  color: #007bb0;
+}
+
+/* Social Media icon row */
+.socialRow {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.socialIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
+}
+
+.svgIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.socialIcon:hover {
+  background-color: #009fe3;
+  color: #ffffff;
+  border-color: #009fe3;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 159, 227, 0.25);
+}
+
+/* Right Column: Contact Message Form */
+.formCard {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  padding: 50px 40px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03);
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputLabel {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 750;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.textInput, .selectInput, .textareaInput {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.textInput:focus, .selectInput:focus, .textareaInput:focus {
+  border-color: #009fe3;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 159, 227, 0.1);
+}
+
+.selectInput {
+  cursor: pointer;
+}
+
+.textareaInput {
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #009fe3;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 32px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 159, 227, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #0088c4;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(0, 159, 227, 0.35);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Trust Badges */
+.trustBadges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.badgeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badgeDot {
+  width: 5px;
+  height: 5px;
+  background-color: #009fe3;
+  border-radius: 50%;
+}
+
+/* Success Block */
+.successBlock {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successIconWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.successIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.successTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.successDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 0 35px 0;
+}
+
+.resetBtn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resetBtn:hover {
+  border-color: #009fe3;
+  color: #009fe3;
+  background-color: rgba(0, 159, 227, 0.02);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 120px 20px 80px 20px;
+  }
+  .headline {
+    font-size: 2.6rem;
+  }
+  .formCard {
+    padding: 35px 25px;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .trustBadges {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCardsGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardLink {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoCard {
+    padding: 24px 16px;
+  }
+  .cardLink {
+    font-size: 0.98rem;
+  }
+}

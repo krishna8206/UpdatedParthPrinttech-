@@ -1,0 +1,533 @@
+{
+  "admin": {
+    "username": "admin",
+    "passwordHash": "$2a$10$7R0wK2Rmv6.60y/9w3I3zOGEaW6G98F8V4wU8x76U9X566QvM/i36",
+    "name": "Super Admin"
+  },
+  "home": {
+    "heroSlides": [
+      {
+        "id": 1,
+        "videoSrc": "/videos/0918(2) (1).mp4",
+        "title": "High-Precision",
+        "titleHighlight": "Rotogravure & Flexo",
+        "subtitle": "Delivering crisp, vivid colors on film rolls with unmatched calibration.",
+        "ctaText": "Explore Services",
+        "ctaLink": "/products",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "videoSrc": "/videos/0918(2) (1).mp4",
+        "title": "Custom ",
+        "titleHighlight": "Label Solutions",
+        "subtitle": "Vibrant shrink sleeves and wrap-around labels custom-calibrated to container shapes.",
+        "ctaText": "Explore Services",
+        "ctaLink": "/products",
+        "isActive": true
+      },
+      {
+        "id": 3,
+        "videoSrc": "/videos/0918(2) (1).mp4",
+        "title": "Premium",
+        "titleHighlight": "Shrink Films",
+        "subtitle": "Plain and printed packaging films engineered to protect and showcase your products.",
+        "ctaText": "Explore Services",
+        "ctaLink": "/products",
+        "isActive": true
+      },
+      {
+        "id": 4,
+        "videoSrc": "/videos/0918(2) (1).mp4",
+        "title": "End-to-End",
+        "titleHighlight": "Excellence",
+        "subtitle": "From digital calibration to finished sleeve rolls, we ensure top-tier quality.",
+        "ctaText": "Explore Services",
+        "ctaLink": "/products",
+        "isActive": true
+      }
+    ],
+    "whoWeAre": {
+      "subheading": "WHO WE ARE",
+      "headingLine1": "High-Speed",
+      "headingLine2Highlight": "Rotogravure",
+      "headingLine2Rest": "Printing.",
+      "description": "At Parth Printtech, we redefine flexible packaging through advanced engineering and high-speed precision. Powered by our state-of-the-art Polaris S7 Series multi-station rotogravure press, we deliver micron-accurate printing on PVC, PETG, and BOPP shrink films with unmatched color fidelity and razor-sharp registration.",
+      "image": "/images/polaris_s7_series.png",
+      "badgeText": "• POLARIS S7 ROTOGRAVURE • PARTH PRINTTECH •",
+      "features": [
+        "Electronic Line Shaft (ELS) Drive",
+        "High-Speed Output up to 350 m/min",
+        "Automatic Register & Web Tension",
+        "Micro-Precision Dot Fidelity"
+      ],
+      "stats": [
+        {
+          "num": "9+",
+          "label": "Color Stations",
+          "backText": "Multi-station Polaris S7 rotogravure press with automated ink circulation & viscosity management."
+        },
+        {
+          "num": "350+",
+          "label": "M/Min High Speed",
+          "backText": "Rapid turnaround and large-scale industrial packaging without compromising print fidelity."
+        }
+      ],
+      "floatCards": [
+        {
+          "title": "Polaris S7 Series Press",
+          "desc": "Advanced multi-station rotogravure with automated register control."
+        },
+        {
+          "title": "Micro-Precision Fidelity",
+          "desc": "Flawless dot reproduction & vibrant saturation on PVC, PETG & BOPP."
+        }
+      ]
+    },
+    "markets": {
+      "title": "Markets We",
+      "titleHighlight": "Serve",
+      "description": "We combine high-precision gravure printing and customized packaging prototypes to deliver premium solutions across diverse industrial sectors.",
+      "items": [
+        {
+          "id": "food",
+          "title": "Food Packaging",
+          "description": "Vibrant moisture-resistant shrink sleeves, stand-up pouch film rolls, and custom-calibrated food container labels.",
+          "products": [
+            "Stand-Up Pouches",
+            "Shrink Sleeves",
+            "Contour Labels"
+          ],
+          "accentColor": "#ff7a00"
+        },
+        {
+          "id": "beverages",
+          "title": "Beverages",
+          "description": "Waterproof bottle labels, high-shrink sleeves, and BOPP wrap-around labels built to survive condensation and high-speed filling lines.",
+          "products": [
+            "Wet Glue Labels",
+            "Shrink Sleeves",
+            "BOPP Wrap-Arounds"
+          ],
+          "accentColor": "#009fe3"
+        },
+        {
+          "id": "personal-care",
+          "title": "Personal Care",
+          "description": "Premium cosmetic labels, hot-stamped metallic sleeves, and squeeze tube labels with tactile UV finishes.",
+          "products": [
+            "Cosmetics Labels",
+            "Hot Foil Sleeves",
+            "Squeeze Tube Labels"
+          ],
+          "accentColor": "#e91e63"
+        },
+        {
+          "id": "family-care",
+          "title": "Family Care",
+          "description": "Moisture-resistant label solutions, wrap-around films, and tamper-evident shrink bands for household essentials.",
+          "products": [
+            "Detergent Labels",
+            "Tamper Bands",
+            "Soap Wraps"
+          ],
+          "accentColor": "#4caf50"
+        },
+        {
+          "id": "pharmaceuticals",
+          "title": "Pharmaceuticals",
+          "description": "High-precision vial labels, medical container sleeves, and tamper-evident security labels with high-contrast print.",
+          "products": [
+            "Vial Labels",
+            "Security Sleeves",
+            "Directional Labels"
+          ],
+          "accentColor": "#00bcd4"
+        },
+        {
+          "id": "dairy",
+          "title": "Dairy Products",
+          "description": "Moisture-resistant shrink sleeves, protective cup lids, and temperature-stable dairy container labels.",
+          "products": [
+            "Yogurt Cup Lids",
+            "Butter Wraps",
+            "Dairy Sleeves"
+          ],
+          "accentColor": "#9c27b0"
+        },
+        {
+          "id": "oil-lubricants",
+          "title": "Oils & Lubricants",
+          "description": "Heavy-duty labels, greaseproof container graphics, and high-tack industrial adhesives that endure rough handling.",
+          "products": [
+            "Engine Oil Labels",
+            "Grease Canister Labels",
+            "Industrial Drum Decals"
+          ],
+          "accentColor": "#ff5722"
+        },
+        {
+          "id": "paints",
+          "title": "Paints",
+          "description": "Vibrant, chemical-resistant bucket labels and heat transfer container graphics with industry-leading color calibration.",
+          "products": [
+            "Paint Can Labels",
+            "Heat Transfer Graphics",
+            "Bucket Labels"
+          ],
+          "accentColor": "#f6cf00"
+        },
+        {
+          "id": "chemical-fertilizer",
+          "title": "Chemical & Fertilizer",
+          "description": "Hazard-resistant labeling, chemical-shielded stickers, and heavy-duty container labels with razor-sharp warning print.",
+          "products": [
+            "Hazard Warning Labels",
+            "Drum Stickers",
+            "Chemical Resisting Labels"
+          ],
+          "accentColor": "#607d8b"
+        }
+      ]
+    },
+    "featuredProducts": {
+      "title": "Engineered Print",
+      "titleHighlight": "Solutions",
+      "description": "Explore our core print and packaging offerings, built with state-of-the-art machinery and premium finishing operations.",
+      "items": [
+        {
+          "id": "01",
+          "category": "Shrink Sleeves",
+          "title": "PVC Shrink Sleeves",
+          "description": "Conform your packaging graphics seamlessly to complex container contours. Our high-precision PVC shrink sleeve labels offer 360-degree design coverage, high moisture resistance, and tamper-evident sealing.",
+          "image": "/images/products/pvc_shrink_sleeves.png",
+          "accentColor": "#009fe3",
+          "specs": [
+            {
+              "label": "Substrate",
+              "value": "High-Grade PVC Film"
+            },
+            {
+              "label": "Shrinkage Rate",
+              "value": "Up to 50% - 58%"
+            },
+            {
+              "label": "Print Process",
+              "value": "Rotogravure / High-Def Flexo"
+            },
+            {
+              "label": "Layflat Range",
+              "value": "20mm to 350mm"
+            }
+          ]
+        },
+        {
+          "id": "02",
+          "category": "Shrink Sleeves",
+          "title": "PETG Shrink Sleeves",
+          "description": "The pinnacle of shrink label engineering. Made from eco-friendly, recyclable polyester film, these sleeves yield up to 78% shrinkage for heavily contoured containers with absolute clarity.",
+          "image": "/images/products/petg_shrink_sleeves.png",
+          "accentColor": "#e3007b",
+          "specs": [
+            {
+              "label": "Substrate",
+              "value": "Recyclable PET G Film"
+            },
+            {
+              "label": "Shrinkage Rate",
+              "value": "Up to 70% - 78% Max"
+            },
+            {
+              "label": "Print Process",
+              "value": "Gravure / UV Flexo"
+            },
+            {
+              "label": "Sustainability",
+              "value": "100% Recyclable"
+            }
+          ]
+        },
+        {
+          "id": "03",
+          "category": "Wrap-Around Labels",
+          "title": "BOPP Wrap-Around Labels",
+          "description": "Engineered for high-volume, high-speed rotary labeling lines. Our roll-fed BOPP labels offer superior water resistance and high gloss/matte clarity, ideal for carbonated drinks and bottled water.",
+          "image": "/images/products/bopp_wrap_around_labels.png",
+          "imageFit": "contain",
+          "accentColor": "#ffd400",
+          "specs": [
+            {
+              "label": "Substrate",
+              "value": "BOPP (Natural & Pearlised)"
+            },
+            {
+              "label": "Film Thickness",
+              "value": "35 to 50 Microns"
+            },
+            {
+              "label": "Print Process",
+              "value": "Gravure"
+            },
+            {
+              "label": "Adhesive Match",
+              "value": "Hot-Melt Glue System"
+            }
+          ]
+        },
+        {
+          "id": "04",
+          "category": "Heat Transfer Labels",
+          "title": "Heat Transfer Labels (HTL)",
+          "description": "Experience permanent dry-fusion graphic decoration. Using heat and pressure, graphics bond directly to containers, achieving a seamless 'no-label' look with high chemical and scratch resistance.",
+          "image": "/images/products/htl_label_rolls.png",
+          "accentColor": "#111111",
+          "specs": [
+            {
+              "label": "Carrier Film",
+              "value": "Coated PET Carrier Foil"
+            },
+            {
+              "label": "Ink System",
+              "value": "UV Cured / Scratch-Proof"
+            },
+            {
+              "label": "Fusion Temp",
+              "value": "130°C to 180°C"
+            },
+            {
+              "label": "Container Types",
+              "value": "PE, PP, PET, PS, Glass"
+            }
+          ]
+        },
+        {
+          "id": "05",
+          "category": "Shrink Film",
+          "title": "Plain PVC Shrink Film",
+          "description": "Premium unprinted PVC shrink film rolls for manual or automated wrapping, offering superior clarity, uniform shrinkage, and strong seals.",
+          "image": "/images/products/plain_pvc_shrink_film.png",
+          "accentColor": "#4f46e5",
+          "specs": [
+            {
+              "label": "Substrate",
+              "value": "Premium Grade Plain PVC"
+            },
+            {
+              "label": "Shrinkage Rate",
+              "value": "Up to 40% - 45%"
+            },
+            {
+              "label": "Format",
+              "value": "Roll Form & Cut Pieces (As per Requirement)"
+            },
+            {
+              "label": "Appearance",
+              "value": "Super Clear / High Gloss"
+            }
+          ]
+        }
+      ]
+    },
+    "clients": {
+      "title": "Trusted by the",
+      "titleHighlight": "Industry Leaders",
+      "description": "We design, manufacture, and print high-performance packaging and shrink sleeves for trusted market leaders like Gulab Oils, Flexibond, and Gokul Sweets.",
+      "items": [
+        {
+          "id": 1,
+          "name": "Flexibond",
+          "brand": "Flexibond",
+          "color": "#009fe3",
+          "logoUrl": "/logo/flexibond.webp"
+        },
+        {
+          "id": 2,
+          "name": "Gulab Oils",
+          "brand": "Gulab Oils",
+          "color": "#e91e63",
+          "logoUrl": "/logo/gulab_oils.webp"
+        },
+        {
+          "id": 3,
+          "name": "Gokul Sweets",
+          "brand": "Gokul Sweets",
+          "color": "#4caf50",
+          "logoUrl": "/logo/gokul.png"
+        },
+        {
+          "id": 4,
+          "name": "Flexibond",
+          "brand": "Flexibond",
+          "color": "#009fe3",
+          "logoUrl": "/logo/flexibond.webp"
+        },
+        {
+          "id": 5,
+          "name": "Gulab Oils",
+          "brand": "Gulab Oils",
+          "color": "#e91e63",
+          "logoUrl": "/logo/gulab_oils.webp"
+        },
+        {
+          "id": 6,
+          "name": "Gokul Sweets",
+          "brand": "Gokul Sweets",
+          "color": "#4caf50",
+          "logoUrl": "/logo/gokul.png"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What Our Partners",
+      "titleHighlight": "Say",
+      "description": "Read reviews from leading cosmetic, pharmaceutical, food, and industrial brands that trust our precision printing and custom packaging operations.",
+      "items": [
+        {
+          "id": 1,
+          "client": "Aisha Sharma",
+          "role": "Brand Director",
+          "company": "Aura Cosmetics",
+          "quote": "The spot UV finishing and gold hot foil stamping on our custom mono cartons are absolutely flawless. Parth Printtech elevated our shelf presence.",
+          "rating": 5,
+          "avatarColor": "#ff7a00"
+        },
+        {
+          "id": 2,
+          "client": "Rajesh Patel",
+          "role": "Operations Head",
+          "company": "Veda Organics",
+          "quote": "Finding moisture-resistant labels that survive condensation was a challenge. Their wet glue labels have solved our refrigeration issues completely.",
+          "rating": 5,
+          "avatarColor": "#009fe3"
+        },
+        {
+          "id": 3,
+          "client": "Samantha D'Souza",
+          "role": "Supply Chain Lead",
+          "company": "NutriFoods India",
+          "quote": "Excellent barrier properties on the stand-up pouches. The zip locks are robust and oxygen-barrier laminates keep our organic coffee perfectly fresh.",
+          "rating": 5,
+          "avatarColor": "#4caf50"
+        },
+        {
+          "id": 4,
+          "client": "Dr. Vikram Mehta",
+          "role": "QA Director",
+          "company": "Zenith Pharmaceuticals",
+          "quote": "Regulatory compliance printing demands absolute precision. Parth's automated advanced gravure printing presses guarantee zero-defect medicine boxes.",
+          "rating": 5,
+          "avatarColor": "#00bcd4"
+        },
+        {
+          "id": 5,
+          "client": "Meera Sen",
+          "role": "Marketing Manager",
+          "company": "Urban Retail Group",
+          "quote": "Their toolless assembly standees are a massive hit in retail stores. Sturdy sunboard structure and vivid direct UV prints that pop under store lights.",
+          "rating": 5,
+          "avatarColor": "#e91e63"
+        },
+        {
+          "id": 6,
+          "client": "Kabir Malhotra",
+          "role": "Plant Manager",
+          "company": "Apex Lubricants",
+          "quote": "Industrial grease canisters need labels that resist chemicals and oils. Parth's high-tack drum stickers endure harsh handling and rough weather.",
+          "rating": 5,
+          "avatarColor": "#607d8b"
+        },
+        {
+          "id": 7,
+          "client": "Neha Gupta",
+          "role": "Founder",
+          "company": "Bloom Botanicals",
+          "quote": "The custom textured rigid boxes with magnetic closures look stunning. Our luxury gift boxes feel incredibly premium, and customers love them.",
+          "rating": 5,
+          "avatarColor": "#9c27b0"
+        },
+        {
+          "id": 8,
+          "client": "Arjun Reddy",
+          "role": "Logistics Manager",
+          "company": "Krishi Fertilizers",
+          "quote": "We ordered high-volume heavy-duty Kraft liner cases. Crushing resistance is top-tier; not a single package collapsed during transit.",
+          "rating": 5,
+          "avatarColor": "#ff5722"
+        }
+      ]
+    },
+    "values": {
+      "title": "Our Values Shape",
+      "titleHighlight": "Excellence",
+      "description": "We combine high-volume production efficiency with the precise touch of artisan detail to deliver top-tier commercial printing and packaging solutions.",
+      "items": [
+        {
+          "id": 1,
+          "title": "Precision Quality",
+          "description": "Every print dot, seaming line, and custom sleeve is manufactured under strict tolerance guidelines using next-generation color profiling.",
+          "iconType": "target"
+        },
+        {
+          "id": 2,
+          "title": "Advanced Technology",
+          "description": "We invest in world-class rotogravure and CI flexo presses and automated sleeve seaming machinery to achieve unmatched output speeds and consistency.",
+          "iconType": "cpu"
+        },
+        {
+          "id": 3,
+          "title": "Eco-Friendly Print",
+          "description": "Committed to sustainable film sourcing, eco-friendly ink systems, and 100% recyclable polyester (PETG) shrink sleeves.",
+          "iconType": "leaf"
+        },
+        {
+          "id": 4,
+          "title": "Custom Craftsmanship",
+          "description": "From custom pre-distortion graphic calibration to high-end embellishments like cold foil stamping and tactile spot UV coatings, we realize your brand's unique vision.",
+          "iconType": "shield"
+        }
+      ]
+    }
+  },
+  "settings": {
+    "siteName": "Parth Printtech LLP",
+    "tagline": "Premium Label & Shrink Film Solutions",
+    "contactEmail": "info@parthprinttech.com",
+    "contactPhone": "+91 98765 43210",
+    "address": "Plot No. 123, GIDC Industrial Estate, Gujarat, India",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com",
+      "instagram": "https://instagram.com",
+      "facebook": "https://facebook.com",
+      "whatsapp": "+919876543210"
+    }
+  },
+  "about": {
+    "hero": {
+      "image1": "http://localhost:5000/uploads/printing_machine-1790059952713-165653.png",
+      "image2": "/images/products/bopp_label.png",
+      "image3": "http://localhost:5000/uploads/pvc_srink-1790060003259-926634.png"
+    },
+    "founders": {
+      "subtitle": "LEADERSHIP & VISION",
+      "title": "Meet Our",
+      "titleHighlight": "Founders",
+      "description": "Driven by technical innovation and an unwavering commitment to packaging excellence.",
+      "image": "http://localhost:5000/uploads/founder-1790063391846-225247.webp",
+      "badgeText": "FOUNDERS & DIRECTORS",
+      "foundersList": [
+        {
+          "id": "1",
+          "index": "01",
+          "name": "Parth Patel",
+          "description": "Leading strategic vision and technology adoption in high-precision shrink sleeves and printing innovation."
+        },
+        {
+          "id": "2",
+          "index": "02",
+          "name": "Shailesh Patel",
+          "description": "Pioneering industrial print engineering, rotogravure calibrations, and operational excellence across commercial markets."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,339 @@
+.heroSection {
+  background-color: #fcfdfe;
+  padding: 180px 40px 120px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.1;
+  /* Faint motion background, visible but subtle */
+}
+
+/* Blueprint drafting line background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.gridLineX {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.gridLineY {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.contentBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 4.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.accentText {
+  color: #009fe3;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.25rem;
+  color: #495057;
+  line-height: 1.75;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+
+/* CTA Button Styling */
+.ctaWrapper {
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #009fe3;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow: 0 12px 30px rgba(0, 159, 227, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 159, 227, 0.35);
+  background-color: #0088c4;
+}
+
+.btnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .btnIcon {
+  transform: translateX(4px);
+}
+
+/* Premium Integrated Production Showcase */
+.showcaseBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.showcaseContainer {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.showcaseCard {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* Primary Feature Card: Polaris S7 Machine */
+.mainCard {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 25, 55, 0.09);
+  border: 4px solid #ffffff;
+  background-color: #0b1329;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.mainCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(0, 30, 70, 0.15);
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mainCard:hover .mainImg {
+  transform: scale(1.02);
+}
+
+/* Secondary Duo Grid */
+.subGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.subCard {
+  position: relative;
+  width: 100%;
+  height: 205px;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(0, 25, 55, 0.09);
+  border: 4px solid #ffffff;
+  background: radial-gradient(circle at center, #ffffff 45%, #f1f5f9 100%);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 50px rgba(0, 159, 227, 0.18);
+}
+
+.subImg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.rollImg {
+  object-fit: cover !important;
+  object-position: center 15% !important;
+}
+
+.bottleImg {
+  object-fit: contain !important;
+  padding: 10px 14px !important;
+}
+
+.subCard:hover .subImg {
+  transform: scale(1.04);
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3.8rem;
+  }
+
+  .mainCard {
+    height: 270px;
+  }
+
+  .subCard {
+    height: 170px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .title {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .showcaseBlock {
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .showcaseContainer {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 120px 20px 80px 20px;
+  }
+
+  .title {
+    font-size: 2.6rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .mainCard {
+    height: 220px;
+  }
+
+  .floatingBadge {
+    font-size: 0.72rem;
+    padding: 6px 14px;
+    bottom: 12px;
+    left: 12px;
+  }
+
+  .subGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .subCard {
+    height: 180px;
+  }
+}

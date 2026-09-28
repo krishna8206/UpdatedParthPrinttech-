@@ -1,0 +1,222 @@
+.heroSection {
+  background-color: #fcfdfe;
+  padding: 170px 40px 110px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Blueprint drafting line background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, rgba(0, 159, 227, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.gridLineX {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.gridLineY {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed rgba(0, 159, 227, 0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.centerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #009fe3;
+  background: rgba(0, 159, 227, 0.08);
+  border: 1px solid rgba(0, 159, 227, 0.22);
+  padding: 6px 18px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 26px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 10px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 4.5rem;
+  font-weight: 850;
+  line-height: 1.12;
+  color: #0f172a;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.accentText {
+  color: #009fe3;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.22rem;
+  color: #475569;
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 0 auto 42px auto;
+  text-align: center;
+}
+
+.ctaWrapper {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #009fe3;
+  color: #ffffff;
+  padding: 16px 36px;
+  border-radius: 14px;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 30px rgba(0, 159, 227, 0.25);
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 159, 227, 0.35);
+  background-color: #0088c4;
+}
+
+.ctaButtonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #ffffff;
+  color: #009fe3;
+  padding: 16px 36px;
+  border-radius: 14px;
+  border: 1.5px solid rgba(0, 159, 227, 0.35);
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.ctaButtonOutline:hover {
+  background-color: rgba(0, 159, 227, 0.06);
+  border-color: #009fe3;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 159, 227, 0.12);
+}
+
+.btnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .btnIcon,
+.ctaButtonOutline:hover .btnIcon {
+  transform: translateX(4px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .heroSection {
+    padding: 140px 30px 90px 30px;
+  }
+  .title {
+    font-size: 3.6rem;
+  }
+  .description {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 120px 20px 70px 20px;
+  }
+  .title {
+    font-size: 2.7rem;
+  }
+  .description {
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+  }
+  .ctaWrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaButton,
+  .ctaButtonOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}

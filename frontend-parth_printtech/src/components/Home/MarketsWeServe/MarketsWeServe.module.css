@@ -1,0 +1,358 @@
+.section {
+  padding: 120px 40px;
+  background-color: #fafbfc; /* Matches overall layout background */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Interactive Background Graphics (matching Who We Are style) */
+.interactiveBg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Below content elements */
+  overflow: hidden;
+}
+
+.floatShape {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  transition: opacity 0.5s ease;
+}
+
+.section:hover .floatShape {
+  opacity: 0.15; /* Becomes slightly more visible on section hover */
+}
+
+.shape1 {
+  /* Abstract Overlapping Circles (Color Mixing / CMYK Concept) */
+  top: 10%; left: 3%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="60" cy="40" r="30" fill="none" stroke="%23009fe3" stroke-width="1"/><circle cx="50" cy="60" r="30" fill="none" stroke="%23009fe3" stroke-width="1.5"/></svg>');
+}
+
+.shape2 {
+  /* Abstract Minimalist Packaging Box / Outline */
+  bottom: 5%; right: 2%;
+  width: 420px; height: 420px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="none" stroke="%23009fe3" stroke-width="1"/><path d="M 100 20 L 100 100 M 20 60 L 100 100 M 180 60 L 100 100" fill="none" stroke="%23009fe3" stroke-width="1"/></svg>');
+  transform: rotate(45deg);
+}
+
+.shape3 {
+  /* Die-cut Label Outline with Dashed lines */
+  top: 45%; left: 45%;
+  width: 320px; height: 320px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="15" y="25" width="70" height="50" rx="15" fill="none" stroke="%23009fe3" stroke-width="1.5" stroke-dasharray="4 4"/><circle cx="85" cy="50" r="5" fill="%23009fe3"/></svg>');
+  transform: rotate(-15deg);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header styling */
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 30px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.outlinedText {
+  color: #009fe3;
+  position: relative;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Fanned Paper Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px 36px;
+  align-items: stretch;
+}
+
+/* Card Wrapper holds fanning sheets in absolute positions */
+.cardWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Back fanned paper sheet layers */
+.paperLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 0;
+  border: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.layerBack {
+  transform: rotate(-2.5deg);
+}
+
+.layerMiddle {
+  transform: rotate(2deg);
+}
+
+/* Main Card Sheet simulating Cardstock paperboard */
+.mainCard {
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover Fanning Animations */
+.cardWrapper:hover .layerBack {
+  transform: rotate(-8deg) translate(-12px, -6px);
+}
+
+.cardWrapper:hover .layerMiddle {
+  transform: rotate(6deg) translate(10px, -4px);
+}
+
+.cardWrapper:hover .mainCard {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
+  border-color: var(--accent-color);
+}
+
+/* CMYK Registration marks at top-right corner */
+.registrationMarks {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  gap: 5px;
+  opacity: 0.65;
+  transition: opacity 0.3s ease;
+}
+
+.cardWrapper:hover .registrationMarks {
+  opacity: 1;
+}
+
+.regDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #1a1a1a;
+}
+
+.cyan { background-color: #009fe3; }
+.magenta { background-color: #e3007b; }
+.yellow { background-color: #ffd400; }
+.key { background-color: #1a1a1a; }
+
+/* Packaging / Product Image Showcase */
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  background: #f8fafc;
+  border: 1px solid #e8edf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 22px;
+  padding: 18px;
+  flex-shrink: 0;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.marketImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(15, 23, 42, 0.07));
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.cardWrapper:hover .imageContainer {
+  background: #ffffff;
+  border-color: var(--accent-color, #009fe3);
+}
+
+.cardWrapper:hover .marketImage {
+  transform: scale(1.07);
+}
+
+.cardTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.cardWrapper:hover .cardTitle {
+  color: var(--accent-color);
+}
+
+.cardDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: #718096;
+  line-height: 1.65;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+/* Tag details container */
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.tag {
+  background: #f7fafc;
+  border: 1px solid #edf2f7;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4a5568;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.tagDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.tag:hover {
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  transform: translateY(-1px);
+}
+
+/* Responsiveness adjustments */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 28px;
+  }
+}
+
+@media (max-width: 960px) {
+  .section {
+    padding: 100px 30px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 28px;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .imageContainer {
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Reduce fanning animation depth on tablets to prevent edge clipping */
+  .cardWrapper:hover .layerBack {
+    transform: rotate(-3deg) translate(-4px, -2px);
+  }
+  .cardWrapper:hover .layerMiddle {
+    transform: rotate(2.5deg) translate(3px, -2px);
+  }
+  .cardWrapper:hover .mainCard {
+    transform: translateY(-6px);
+  }
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 80px 20px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+  }
+  .mainCard {
+    padding: 26px 20px;
+  }
+  .imageContainer {
+    height: 160px;
+  }
+  .title {
+    font-size: 2.1rem;
+  }
+}

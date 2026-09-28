@@ -1,0 +1,280 @@
+.footer {
+  background-color: #fafbfc; /* Premium off-white footer matching the homepage body background */
+  padding: 100px 40px 40px;
+  color: #4a5568; /* Crisp slate text */
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  position: relative;
+  z-index: 10;
+  border-top: 1.5px solid #e2e8f0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 70px;
+}
+
+/* Brand Details Column */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoWrapper {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logoLink:hover {
+  transform: scale(1.02);
+}
+
+.logoImageRaw {
+  height: 52px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
+  display: block;
+}
+
+.brandDesc {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #4a5568;
+  margin: 0 0 25px 0;
+  max-width: 320px;
+}
+
+/* CMYK Registration marks at bottom of brand col */
+.registrationMarks {
+  display: flex;
+  gap: 5px;
+  opacity: 0.7;
+}
+
+.regDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+}
+
+.cyan { background-color: #009fe3; }
+.magenta { background-color: #e3007b; }
+.yellow { background-color: #ffd400; }
+.key { background-color: #1a1a1a; } /* Dark key dot instead of white */
+
+/* Links Columns */
+.colTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1e293b; /* Dark titles */
+  margin-bottom: 30px;
+  letter-spacing: -0.02em;
+  position: relative;
+  display: inline-block;
+}
+
+.colTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 28px;
+  height: 2.5px;
+  background-color: #009fe3;
+  border-radius: 2px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link {
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.link:hover {
+  color: #009fe3;
+  transform: translateX(4px);
+}
+
+.staticLink {
+  color: #4a5568;
+  font-size: 0.95rem;
+  display: inline-block;
+  cursor: default;
+}
+
+/* Contact Column */
+.contactCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.phoneGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactIcon {
+  width: 18px;
+  height: 18px;
+  color: #009fe3;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactLink {
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.contactLink:hover {
+  color: #009fe3;
+}
+
+.contactText {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Footer Bottom Bar styling */
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 0 0 35px 0;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyText {
+  font-size: 0.88rem;
+  color: #718096;
+  margin: 0;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bottomLink {
+  color: #718096;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+}
+
+.bottomLink:hover {
+  color: #009fe3;
+}
+
+.bullet {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+}
+
+/* Responsiveness overrides */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .brandCol {
+    grid-column: span 2;
+  }
+  .brandDesc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 70px 20px 30px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+  .brandCol {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logoWrapper {
+    justify-content: center;
+  }
+  .registrationMarks {
+    justify-content: center;
+  }
+  .colTitle {
+    margin-bottom: 22px;
+  }
+  .bottomBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,218 @@
+.section {
+  padding: 120px 40px;
+  background-color: #fafbfc; /* Blends with existing home layout */
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr; /* Squeezes columns container */
+  gap: 80px;
+  align-items: center;
+}
+
+/* Left Content Side */
+.contentSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 5rem; /* Prominent massive heading */
+  font-weight: 800;
+  line-height: 1.05;
+  color: #111;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.outlinedText {
+  color: #009fe3;
+  position: relative;
+  letter-spacing: -.2rem;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.35rem; /* Larger, readable paragraph text */
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Right Marquee Side Grid */
+.marqueeSide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+  /* Top & Bottom gradient mask to fade scrolling edges */
+  mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1) 15%, rgba(0, 0, 0, 1) 85%, transparent);
+}
+
+.column {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: max-content;
+  will-change: transform;
+}
+
+/* Upward moving track */
+.trackUp {
+  animation: scrollUpY 12s linear infinite;
+}
+
+/* Downward moving track */
+.trackDown {
+  animation: scrollDownY 12s linear infinite;
+}
+
+/* Pause animations on hover of the section grid */
+.marqueeSide:hover .track {
+  animation-play-state: paused;
+}
+
+/* Individual Logo Cards (Glassmorphism design matching reference image) */
+.logoCard {
+  width: 100%;
+  max-width: 130px; /* Compress max size of the square boxes */
+  margin: 0 auto;
+  aspect-ratio: 1 / 1; /* Perfectly square box */
+  background: #ffffff; /* Solid crisp white */
+  border: 1px solid #e2e8f0;
+  border-radius: 20px; /* Smooth rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px; /* Scaled down padding */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Soft subtle shadow */
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.logoCard:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(0, 159, 227, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 159, 227, 0.08);
+}
+
+.clientLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Vertical translation keyframes */
+@keyframes scrollUpY {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, calc(-50% - 10px), 0); /* account for gaps spacing */
+  }
+}
+
+@keyframes scrollDownY {
+  0% {
+    transform: translate3d(0, calc(-50% - 10px), 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsiveness overrides */
+@media (max-width: 1200px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mainContainer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .marqueeSide {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 20px;
+  }
+  .title {
+    font-size: 2.4rem;
+  }
+  .description {
+    font-size: 1.05rem;
+  }
+  .marqueeSide {
+    height: 340px;
+    gap: 15px;
+  }
+  .logoCard {
+    border-radius: 18px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 15px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .marqueeSide {
+    height: 280px;
+    gap: 10px;
+  }
+  .track {
+    gap: 10px;
+  }
+  .logoCard {
+    border-radius: 12px;
+    padding: 12px;
+  }
+}

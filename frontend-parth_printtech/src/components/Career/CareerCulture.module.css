@@ -1,0 +1,255 @@
+.section {
+  padding: 120px 40px;
+  background-color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 159, 227, 0.05);
+}
+
+/* Blueprint background */
+.blueprintOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background-image:
+    linear-gradient(to right, rgba(0, 159, 227, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 159, 227, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Ambient blobs */
+.bgBlobsContainer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bgBlob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatAround 22s infinite ease-in-out alternate;
+}
+
+.blobA {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 159, 227, 0.07) 0%, rgba(0, 159, 227, 0) 70%);
+  top: -150px;
+  right: -100px;
+  animation-duration: 20s;
+}
+
+.blobB {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 159, 227, 0.05) 0%, rgba(0, 159, 227, 0) 70%);
+  bottom: -150px;
+  left: -100px;
+  animation-duration: 26s;
+  animation-delay: -8s;
+}
+
+@keyframes floatAround {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(60px, 40px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+}
+
+.subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-geist-mono), monospace;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6c757d;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.blueDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #009fe3;
+  box-shadow: 0 0 12px rgba(0, 159, 227, 0.6);
+}
+
+.title {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.accentText {
+  color: #009fe3;
+}
+
+.description {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #495057;
+  line-height: 1.75;
+}
+
+/* Cards Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  padding: 45px 35px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+}
+
+/* Inner die-cut crease line */
+.dieCutLine {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 1px dashed rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  pointer-events: none;
+  transition: border-color 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 159, 227, 0.2);
+  box-shadow: 0 24px 50px rgba(0, 159, 227, 0.08);
+  transition: border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover .dieCutLine {
+  border-color: rgba(0, 159, 227, 0.15);
+}
+
+/* Color strip top */
+.colorStrip {
+  position: absolute;
+  top: 0;
+  left: 35px;
+  height: 3px;
+  width: 60px;
+  border-radius: 0 0 4px 4px;
+  background: linear-gradient(90deg, #009fe3, #33b8f0);
+  transition: width 0.4s ease;
+}
+
+.card:hover .colorStrip {
+  width: 90px;
+}
+
+.iconContainer {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  background-color: rgba(0, 159, 227, 0.07);
+  color: #009fe3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  transition: all 0.35s ease;
+  flex-shrink: 0;
+}
+
+.card:hover .iconContainer {
+  background-color: #009fe3;
+  color: #ffffff;
+}
+
+.cardTitle {
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: #009fe3;
+}
+
+.cardDesc {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-size: 0.97rem;
+  color: #64748b;
+  line-height: 1.68;
+  flex-grow: 1;
+}
+
+/* Spec row at bottom */
+.specRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(0, 159, 227, 0.1);
+}
+
+.specChip {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #009fe3;
+  background-color: rgba(0, 159, 227, 0.07);
+  padding: 4px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .title { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 80px 20px; }
+  .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .title { font-size: 2.2rem; }
+}
+
+
+
