@@ -26,7 +26,7 @@ import {
   ArrowRight,
   Image as ImageIcon
 } from 'lucide-react';
-import { api } from '../../lib/api';
+import { api, FRONTEND_URL } from '../../lib/api';
 import { useToast } from '../../context/ToastContext';
 import { getMediaUrl } from '../../lib/media';
 import FileUpload from '../FileUpload';
@@ -404,7 +404,7 @@ export default function MarketsPageManager() {
             <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} /> Refresh Data
           </button>
           <a
-            href="http://localhost:3000/markets-we-serve"
+            href={`${FRONTEND_URL}/markets-we-serve`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary btn-sm"

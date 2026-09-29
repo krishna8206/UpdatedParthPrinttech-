@@ -1,5 +1,6 @@
 export const BACKEND_URL = (process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_BASE?.replace(/\/api\/?$/, '') || 'https://updatedparthprinttech.onrender.com').replace(/\/$/, '');
 export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || `${BACKEND_URL}/api`;
+export const FRONTEND_URL = (process.env.NEXT_PUBLIC_FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, '');
 
 export function getAuthToken() {
   if (typeof window !== 'undefined') {

@@ -16,7 +16,7 @@ import {
   Tag,
   CheckCircle2
 } from 'lucide-react';
-import { api } from '../../lib/api';
+import { api, FRONTEND_URL } from '../../lib/api';
 import { useToast } from '../../context/ToastContext';
 import { getMediaUrl } from '../../lib/media';
 import FileUpload from '../FileUpload';
@@ -268,7 +268,7 @@ export default function ProductsCatalogManager() {
           <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} /> Refresh Data
         </button>
         <a
-          href="http://localhost:3000/products"
+          href={`${FRONTEND_URL}/products`}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-secondary btn-sm"
@@ -414,7 +414,7 @@ export default function ProductsCatalogManager() {
                           style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '3px' }}
                           onError={(e) => {
                             if (prod.image?.startsWith('/images/')) {
-                              e.currentTarget.src = `http://localhost:3000${prod.image}`;
+                              e.currentTarget.src = `${FRONTEND_URL}${prod.image}`;
                             }
                           }}
                         />
@@ -468,7 +468,7 @@ export default function ProductsCatalogManager() {
                       <MoveDown size={14} />
                     </button>
                     <a
-                      href={`http://localhost:3000/products/${prod.id}`}
+                      href={`${FRONTEND_URL}/products/${prod.id}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-secondary btn-sm"

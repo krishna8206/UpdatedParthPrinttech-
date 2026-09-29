@@ -22,7 +22,7 @@ import {
   CheckCircle2,
   Users
 } from 'lucide-react';
-import { api } from '../../lib/api';
+import { api, FRONTEND_URL } from '../../lib/api';
 import { useToast } from '../../context/ToastContext';
 import { getMediaUrl } from '../../lib/media';
 import FileUpload from '../FileUpload';
@@ -481,7 +481,7 @@ export default function AboutManager() {
             <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} /> Refresh Data
           </button>
           <a
-            href="http://localhost:3000/about"
+            href={`${FRONTEND_URL}/about`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary btn-sm"

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../context/AuthContext';
-import { api } from '../lib/api';
+import { api, FRONTEND_URL } from '../lib/api';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
 import HeroSliderTab from '../components/home/HeroSliderTab';
@@ -210,7 +210,7 @@ export default function DashboardPage() {
                     <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} /> Refresh Data
                   </button>
                   <a
-                    href="http://localhost:3000"
+                    href={FRONTEND_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-secondary btn-sm"

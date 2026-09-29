@@ -33,7 +33,7 @@ import {
   CreditCard,
   ExternalLink
 } from 'lucide-react';
-import { api } from '../../lib/api';
+import { api, FRONTEND_URL } from '../../lib/api';
 import { getMediaUrl } from '../../lib/media';
 import { useToast } from '../../context/ToastContext';
 import Modal from '../Modal';
@@ -606,7 +606,7 @@ export default function CareerManager() {
             <RefreshCw size={14} className={isLoading ? 'animate-spin' : ''} /> Refresh Data
           </button>
           <a
-            href="http://localhost:3000/career"
+            href={`${FRONTEND_URL}/career`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-secondary btn-sm"

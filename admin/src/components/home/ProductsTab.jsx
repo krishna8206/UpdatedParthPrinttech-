@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Save, Plus, Trash2, Edit3, Package, Layers, Image as ImageIcon } from 'lucide-react';
-import { api } from '../../lib/api';
+import { api, FRONTEND_URL } from '../../lib/api';
 import { useToast } from '../../context/ToastContext';
 import { getMediaUrl } from '../../lib/media';
 import FileUpload from '../FileUpload';
@@ -260,7 +260,7 @@ export default function ProductsTab({ initialData = {}, onRefresh }) {
                             style={{ width: '100%', height: '100%', objectFit: 'contain', padding: '2px' }}
                             onError={(e) => {
                               if (prod.image?.startsWith('/images/')) {
-                                e.currentTarget.src = `http://localhost:3000${prod.image}`;
+                                e.currentTarget.src = `${FRONTEND_URL}${prod.image}`;
                               }
                             }}
                           />
