@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit3, MoveUp, MoveDown, Film, CheckCircle2, Play, ExternalLink, Video, Save } from 'lucide-react';
 import { api } from '../../lib/api';
+import { getMediaUrl } from '../../lib/media';
 import { useToast } from '../../context/ToastContext';
 import FileUpload from '../FileUpload';
 import Modal from '../Modal';
@@ -159,8 +160,7 @@ export default function HeroSliderTab({ initialSlides = [], initialHeroVideo = '
   // Resolve video URL for preview (handle both absolute and relative)
   const resolveVideoUrl = (url) => {
     if (!url) return '';
-    if (url.startsWith('http')) return url;
-    return `http://localhost:5000${url.startsWith('/') ? url : '/' + url}`;
+    return getMediaUrl(url);
   };
 
   return (

@@ -7,9 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { productsData } from "./productsData";
+import { getMediaUrl } from "@/lib/media";
 import styles from "./ProductsPage.module.css";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 const ProductsPage = () => {
   const containerRef = useRef(null);
@@ -70,9 +71,7 @@ const ProductsPage = () => {
   }, [activeCategory, headerData, productsList]);
 
   const resolveImage = (src) => {
-    if (!src) return "/images/products/pvc_shrink_sleeves.png";
-    if (src.startsWith("/uploads/")) return `http://localhost:5000${src}`;
-    return src;
+    return getMediaUrl(src, "/images/products/pvc_shrink_sleeves.png");
   };
 
   return (

@@ -34,6 +34,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { api } from '../../lib/api';
+import { getMediaUrl } from '../../lib/media';
 import { useToast } from '../../context/ToastContext';
 import Modal from '../Modal';
 
@@ -1399,7 +1400,7 @@ export default function CareerManager() {
                           <div style={{ display: 'flex', gap: '6px' }}>
                             {app.resumeUrl ? (
                               <a
-                                href={`http://localhost:5000${app.resumeUrl}`}
+                                href={getMediaUrl(app.resumeUrl)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn btn-secondary btn-sm"
@@ -1538,7 +1539,7 @@ export default function CareerManager() {
               <div style={{ marginBottom: '16px' }}>
                 <div style={{ fontSize: '12px', fontWeight: 700, color: 'var(--text-muted)', marginBottom: '6px' }}>ATTACHED RESUME / CV</div>
                 <a
-                  href={`http://localhost:5000${modalForm.resumeUrl}`}
+                  href={getMediaUrl(modalForm.resumeUrl)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-primary"

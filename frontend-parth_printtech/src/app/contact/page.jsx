@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 import gsap from "gsap";
 import styles from "./Contact.module.css";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || process.env.NEXT_PUBLIC_API_URL || "https://updatedparthprinttech.onrender.com/api";
 
 const ContactPage = () => {
   const containerRef = useRef(null);

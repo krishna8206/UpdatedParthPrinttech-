@@ -7,7 +7,7 @@ import styles from "./CareerApply.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 const CareerApply = ({ contactData = {}, rolesList = [], selectedRole = "", onChangeRole }) => {
   const [submitted, setSubmitted] = useState(false);

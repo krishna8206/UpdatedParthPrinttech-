@@ -4,8 +4,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import styles from "./AboutHero.module.css";
+import { getMediaUrl } from "@/lib/media";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 const initialHero = {
   title: "Engineering Packaging With",
@@ -79,10 +80,7 @@ const AboutHero = () => {
   }, [heroData]);
 
   const resolveMedia = (src, fallback) => {
-    if (!src || src.trim() === "") return fallback;
-    const cleanSrc = src.trim();
-    if (cleanSrc.startsWith("/uploads/")) return `http://localhost:5000${cleanSrc}`;
-    return cleanSrc;
+    return getMediaUrl(src, fallback);
   };
 
   return (

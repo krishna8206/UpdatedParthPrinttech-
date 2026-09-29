@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Clients.module.css";
+import { getMediaUrl } from "@/lib/media";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -47,10 +48,7 @@ const Clients = ({ data }) => {
             c.name.toLowerCase() === (item.name || "").toLowerCase()
         );
 
-        let rawSrc = item.logoUrl || presetLogo?.logoSrc || "";
-        if (rawSrc && rawSrc.startsWith("/uploads/")) {
-          rawSrc = `http://localhost:5000${rawSrc}`;
-        }
+        let rawSrc = getMediaUrl(item.logoUrl || presetLogo?.logoSrc || "");
 
         let fallbackLogo = null;
         if (!rawSrc) {

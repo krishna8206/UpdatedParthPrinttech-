@@ -5,8 +5,9 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AboutFounders.module.css";
+import { getMediaUrl } from "@/lib/media";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,10 +43,7 @@ const defaultFoundersData = {
 };
 
 const resolveMedia = (src, fallback) => {
-  if (!src || src.trim() === "") return fallback;
-  const cleanSrc = src.trim();
-  if (cleanSrc.startsWith("/uploads/")) return `http://localhost:5000${cleanSrc}`;
-  return cleanSrc;
+  return getMediaUrl(src, fallback);
 };
 
 const AboutFounders = () => {

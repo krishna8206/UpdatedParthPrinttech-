@@ -1,4 +1,5 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:5000/api';
+export const BACKEND_URL = (process.env.NEXT_PUBLIC_BACKEND_URL || process.env.NEXT_PUBLIC_API_BASE?.replace(/\/api\/?$/, '') || 'https://updatedparthprinttech.onrender.com').replace(/\/$/, '');
+export const API_BASE = process.env.NEXT_PUBLIC_API_BASE || `${BACKEND_URL}/api`;
 
 export function getAuthToken() {
   if (typeof window !== 'undefined') {
@@ -43,7 +44,7 @@ export async function fetchApi(endpoint, options = {}) {
     return data;
   } catch (err) {
     if (err.message && err.message.includes('fetch')) {
-      throw new Error('Unable to connect to Backend on http://localhost:5000. Please ensure the backend server is running.');
+      throw new Error(`Unable to connect to Backend on ${API_BASE}. Please ensure the backend server is running.`);
     }
     throw err;
   }

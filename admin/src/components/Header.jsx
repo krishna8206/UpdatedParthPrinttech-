@@ -66,11 +66,11 @@ export default function Header({ currentTitle = 'Home Page Management', onToggle
             fontWeight: 600,
             color: apiStatus === 'online' ? '#15803d' : apiStatus === 'offline' ? '#b91c1c' : '#475569',
           }}
-          title="Backend REST API Status on http://localhost:5000"
+          title="Backend REST API Status (Live API)"
         >
           <Radio size={13} className={apiStatus === 'checking' ? 'animate-spin' : ''} />
           <span className="api-status-text">
-            {apiStatus === 'online' ? 'Connected (Port 5000)' : apiStatus === 'offline' ? 'Offline' : 'Checking...'}
+            {apiStatus === 'online' ? 'Connected (Live API)' : apiStatus === 'offline' ? 'Offline' : 'Checking...'}
           </span>
           <span className="api-status-compact">
             {apiStatus === 'online' ? 'Online' : apiStatus === 'offline' ? 'Offline' : '...'}

@@ -4,12 +4,13 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./AboutWhoWeAre.module.css";
+import { getMediaUrl } from "@/lib/media";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 const initialWhoWeAre = {
   subtitle: "WHO WE ARE",
@@ -76,9 +77,7 @@ const AboutWhoWeAre = () => {
   }, [data]);
 
   const resolveImage = (src) => {
-    if (!src) return "/images/marketplace/Screenshot 2026-09-18 164510.png";
-    if (src.startsWith("/uploads/")) return `http://localhost:5000${src}`;
-    return src;
+    return getMediaUrl(src, "/images/marketplace/Screenshot 2026-09-18 164510.png");
   };
 
   return (

@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getMediaUrl } from "@/lib/media";
 import styles from "./MarketsWeServe.module.css";
 
 if (typeof window !== "undefined") {
@@ -540,7 +541,7 @@ const defaultSeoBlocks = [
   }
 ];
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5000/api";
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "https://updatedparthprinttech.onrender.com/api";
 
 const defaultHeroMockups = [
   {
@@ -576,10 +577,7 @@ const defaultHeroMockups = [
 ];
 
 const resolvePhoto = (src, fallback = "/images/products/pvc_shrink_sleeves.png") => {
-  if (!src || typeof src !== "string" || src.trim() === "") return fallback;
-  const clean = src.trim();
-  if (clean.startsWith("/uploads/")) return `http://localhost:5000${clean}`;
-  return clean;
+  return getMediaUrl(src, fallback);
 };
 
 const PremiumMarketsWeServe = () => {

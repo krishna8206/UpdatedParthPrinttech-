@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./MarketsWeServe.module.css";
+import { getMediaUrl } from "@/lib/media";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -203,10 +204,7 @@ const marketsList = [
 ];
 
 const resolveMedia = (src, fallback) => {
-  if (!src || typeof src !== "string" || src.trim() === "") return fallback;
-  const cleanSrc = src.trim();
-  if (cleanSrc.startsWith("/uploads/")) return `http://localhost:5000${cleanSrc}`;
-  return cleanSrc;
+  return getMediaUrl(src, fallback);
 };
 
 const MarketsWeServe = ({ data }) => {

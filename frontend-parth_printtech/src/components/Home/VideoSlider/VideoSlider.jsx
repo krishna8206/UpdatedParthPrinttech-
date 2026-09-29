@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import styles from "./VideoSlider.module.css";
+import { getMediaUrl } from "@/lib/media";
 
 const defaultSlides = [
   {
@@ -38,12 +39,10 @@ const defaultSlides = [
 
 const DEFAULT_VIDEO = "/videos/0918(2) (1).mp4";
 
-// Resolve a video URL: if it's a relative path, prefix the backend origin
+// Resolve video URL using smart media helper with local default fallback
 const resolveVideoSrc = (src) => {
   if (!src) return DEFAULT_VIDEO;
-  // If it's an absolute URL (uploaded via admin), use as-is
-  if (src.startsWith("http")) return src;
-  return src;
+  return getMediaUrl(src, DEFAULT_VIDEO);
 };
 
 const VideoSlider = ({ data, heroVideo }) => {
@@ -121,6 +120,12 @@ const VideoSlider = ({ data, heroVideo }) => {
             muted
             playsInline
             src={encodeURI(bgVideo)}
+            onError={(e) => {
+              // Graceful fallback to default local video if remote video fails to load
+              if (e.currentTarget.src && !e.currentTarget.src.endsWith(DEFAULT_VIDEO)) {
+                e.currentTarget.src = DEFAULT_VIDEO;
+              }
+            }}
           />
           <div className={styles.overlay}></div>
         </div>

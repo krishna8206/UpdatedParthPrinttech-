@@ -3,15 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import { Save, Plus, Trash2, Edit3, Globe, Tag, Image as ImageIcon } from 'lucide-react';
 import { api } from '../../lib/api';
+import { getMediaUrl } from '../../lib/media';
 import { useToast } from '../../context/ToastContext';
 import Modal from '../Modal';
 import FileUpload from '../FileUpload';
 
 const resolveAdminImg = (src) => {
-  if (!src) return '';
-  if (src.startsWith('/uploads/')) return `http://localhost:5000${src}`;
-  if (src.startsWith('/')) return `http://localhost:3000${src}`;
-  return src;
+  return getMediaUrl(src);
 };
 
 const emptyMarket = {

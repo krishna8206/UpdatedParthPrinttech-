@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, Check, AlertCircle, Film, Image as ImageIcon, Copy } from 'lucide-react';
 import { uploadFile } from '../lib/api';
+import { getMediaUrl } from '../lib/media';
 import { useToast } from '../context/ToastContext';
 
 export default function FileUpload({
@@ -45,7 +46,7 @@ export default function FileUpload({
         setUploadStats({ loaded, total });
       });
       if (res.success && res.file) {
-        const fullUrl = `http://localhost:5000${res.file.url}`;
+        const fullUrl = getMediaUrl(res.file.url);
         setPreview(fullUrl);
         if (onUploadComplete) {
           onUploadComplete(fullUrl, res.file);

@@ -4,6 +4,13 @@ const BACKEND_BASE = (
   'https://updatedparthprinttech.onrender.com'
 ).replace(/\/$/, '');
 
+/**
+ * Normalizes an image or video URL:
+ * - Rewrites any legacy 'http://localhost:5000' URLs to the live backend URL
+ * - Prefixes relative '/uploads/...' paths with the live backend base
+ * - Leaves local static assets ('/videos/...', '/images/...', '/logo/...') intact
+ * - Leaves absolute external URLs (https://...) intact
+ */
 export function getMediaUrl(src, fallback = '') {
   if (!src || typeof src !== 'string' || !src.trim()) return fallback;
   const clean = src.trim();

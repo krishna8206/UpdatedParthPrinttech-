@@ -15,6 +15,7 @@ import {
   Eye
 } from 'lucide-react';
 import { api } from '../../lib/api';
+import { getMediaUrl } from '../../lib/media';
 import { useToast } from '../../context/ToastContext';
 import FileUpload from '../FileUpload';
 import Modal from '../Modal';
@@ -562,7 +563,7 @@ export default function ClientsTab({ initialData = {}, onRefresh }) {
             <input
               type="text"
               className="form-input"
-              placeholder="e.g. /logo/flexibond.webp or http://localhost:5000/uploads/..."
+              placeholder="e.g. /logo/flexibond.webp or /uploads/..."
               value={clientForm.logoUrl || ''}
               onChange={(e) => handleFormFieldChange('logoUrl', e.target.value)}
             />
@@ -608,7 +609,7 @@ export default function ClientsTab({ initialData = {}, onRefresh }) {
                 {clientForm.logoUrl ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
-                    src={clientForm.logoUrl}
+                    src={getMediaUrl(clientForm.logoUrl)}
                     alt={clientForm.name || 'Preview'}
                     style={{
                       width: '100%',
