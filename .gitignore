@@ -18,8 +18,13 @@ build/
 # Logs
 *.log
 
-# Uploaded/generated files
-backend/uploads/
+# Uploaded heavy video/binary files (keep images tracked so they deploy to live server)
+backend/uploads/*.mp4
+backend/uploads/*.mov
+backend/uploads/*.avi
+backend/uploads/*.mkv
+backend/uploads/*.tmp
+
 
 # Video files
 *.mp4

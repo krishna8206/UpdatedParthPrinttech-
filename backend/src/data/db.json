@@ -67,14 +67,14 @@
         "isActive": true
       }
     ],
-    "heroVideo": "http://localhost:5000/uploads/0918_2___1_-1790075769864-171367.mp4",
+    "heroVideo": "/uploads/0918_2___1_-1790075769864-171367.mp4",
     "whoWeAre": {
       "subheading": "WHO WE ARE",
       "headingLine1": "High-Speed",
       "headingLine2Highlight": "Rotogravure",
       "headingLine2Rest": "Printing.",
       "description": "At Parth Printtech, we redefine flexible packaging through advanced engineering and high-speed precision. Powered by our state-of-the-art Polaris S7 Series multi-station rotogravure press, we deliver micron-accurate printing on PVC, PETG, and BOPP shrink films with unmatched color fidelity and razor-sharp registration.",
-      "image": "http://localhost:5000/uploads/printing_machine-1790077709022-574694.png",
+      "image": "/uploads/printing_machine-1790077709022-574694.png",
       "badgeText": "• POLARIS S7 ROTOGRAVURE • PARTH PRINTTECH •",
       "features": [
         "Electronic Line Shaft (ELS) Drive",
@@ -114,7 +114,7 @@
           "id": "food",
           "title": "Food Packaging",
           "description": "Vibrant moisture-resistant shrink sleeves, stand-up pouch film rolls, and custom-calibrated food container labels.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_4_03_39_PM-1790591669794-259910.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_4_03_39_PM-1790591669794-259910.jpeg",
           "products": [
             "Stand-Up Pouches",
             "Shrink Sleeves",
@@ -126,7 +126,7 @@
           "id": "beverages",
           "title": "Beverages",
           "description": "Waterproof bottle labels, high-shrink sleeves, and BOPP wrap-around labels built to survive condensation and high-speed filling lines.",
-          "image": "http://localhost:5000/uploads/beverages_2-1790074006376-43390.png",
+          "image": "/uploads/beverages_2-1790074006376-43390.png",
           "products": [
             "Wet Glue Labels",
             "Shrink Sleeves",
@@ -138,7 +138,7 @@
           "id": "personal-care",
           "title": "Personal Care",
           "description": "Premium cosmetic labels, hot-stamped metallic sleeves, and squeeze tube labels with tactile UV finishes.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_3_14_23_PM-1790590852606-869331.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_23_PM-1790590852606-869331.jpeg",
           "products": [
             "Cosmetics Labels",
             "Hot Foil Sleeves",
@@ -150,7 +150,7 @@
           "id": "family-care",
           "title": "Family Care",
           "description": "Moisture-resistant label solutions, wrap-around films, and tamper-evident shrink bands for household essentials.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_3_14_25_PM__1_-1790591227634-97324.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_25_PM__1_-1790591227634-97324.jpeg",
           "products": [
             "Detergent Labels",
             "Tamper Bands",
@@ -162,7 +162,7 @@
           "id": "pharmaceuticals",
           "title": "Pharmaceuticals",
           "description": "High-precision vial labels, medical container sleeves, and tamper-evident security labels with high-contrast print.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_3_14_26_PM-1790591025586-557155.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_26_PM-1790591025586-557155.jpeg",
           "products": [
             "Vial Labels",
             "Security Sleeves",
@@ -174,7 +174,7 @@
           "id": "dairy",
           "title": "Dairy Products",
           "description": "Moisture-resistant shrink sleeves, protective cup lids, and temperature-stable dairy container labels.",
-          "image": "http://localhost:5000/uploads/25caf39c-6da6-4055-986c-09291ceac84d-1790590998465-641488.jpg",
+          "image": "/uploads/25caf39c-6da6-4055-986c-09291ceac84d-1790590998465-641488.jpg",
           "products": [
             "Yogurt Cup Lids",
             "Butter Wraps",
@@ -186,7 +186,7 @@
           "id": "oil-lubricants",
           "title": "Oils & Lubricants",
           "description": "Heavy-duty labels, greaseproof container graphics, and high-tack industrial adhesives that endure rough handling.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_3_14_25_PM-1790591166275-204014.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_25_PM-1790591166275-204014.jpeg",
           "products": [
             "Engine Oil Labels",
             "Grease Canister Labels",
@@ -198,7 +198,7 @@
           "id": "paints",
           "title": "Paints",
           "description": "Vibrant, chemical-resistant bucket labels and heat transfer container graphics with industry-leading color calibration.",
-          "image": "http://localhost:5000/uploads/paints-1790074024950-845872.png",
+          "image": "/uploads/paints-1790074024950-845872.png",
           "products": [
             "Paint Can Labels",
             "Heat Transfer Graphics",
@@ -210,7 +210,7 @@
           "id": "chemical-fertilizer",
           "title": "Chemical & Fertilizer",
           "description": "Hazard-resistant labeling, chemical-shielded stickers, and heavy-duty container labels with razor-sharp warning print.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-28_at_3_14_26_PM__1_-1790591045204-257196.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_26_PM__1_-1790591045204-257196.jpeg",
           "products": [
             "Hazard Warning Labels",
             "Drum Stickers",
@@ -230,7 +230,7 @@
           "category": "Shrink Sleeves",
           "title": "PVC Shrink Sleeves",
           "description": "Conform your packaging graphics seamlessly to complex container contours. Our high-precision PVC shrink sleeve labels offer 360-degree design coverage, high moisture resistance, and tamper-evident sealing.",
-          "image": "http://localhost:5000/uploads/pvc_srink-1790055885074-734328.png",
+          "image": "/uploads/pvc_srink-1790055885074-734328.png",
           "accentColor": "#009fe3",
           "specs": [
             {
@@ -256,7 +256,7 @@
           "category": "Shrink Sleeves",
           "title": "PETG Shrink Sleeves",
           "description": "The pinnacle of shrink label engineering. Made from eco-friendly, recyclable polyester film, these sleeves yield up to 78% shrinkage for heavily contoured containers with absolute clarity.",
-          "image": "http://localhost:5000/uploads/petg_shrink_sleeves-1790056769229-562694.png",
+          "image": "/uploads/petg_shrink_sleeves-1790056769229-562694.png",
           "accentColor": "#e3007b",
           "specs": [
             {
@@ -309,7 +309,7 @@
           "category": "Heat Transfer Labels",
           "title": "Heat Transfer Labels (HTL)",
           "description": "Experience permanent dry-fusion graphic decoration. Using heat and pressure, graphics bond directly to containers, achieving a seamless 'no-label' look with high chemical and scratch resistance.",
-          "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790056696999-232314.jpeg",
+          "image": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790056696999-232314.jpeg",
           "accentColor": "#111111",
           "specs": [
             {
@@ -522,7 +522,7 @@
       "category": "Shrink Sleeves",
       "title": "PVC Shrink Sleeves",
       "description": "High-grade PVC shrink sleeve labels offering 360-degree graphics contouring for food, beverage, cosmetics, and household containers.",
-      "image": "http://localhost:5000/uploads/pvc_srink-1790059064730-853618.png",
+      "image": "/uploads/pvc_srink-1790059064730-853618.png",
       "accentColor": "#009fe3",
       "dim": "Custom Diameter & Height",
       "regMark": "REG-PVC-01",
@@ -560,7 +560,7 @@
       "category": "Shrink Sleeves",
       "title": "PETG Shrink Sleeves",
       "description": "Premium eco-friendly polyester shrink sleeves with maximum shrinkage percentage for highly contoured beverage and aerosol bottles.",
-      "image": "http://localhost:5000/uploads/petg-1790059728893-351007.webp",
+      "image": "/uploads/petg-1790059728893-351007.webp",
       "accentColor": "#e3007b",
       "dim": "Custom Contour Fit",
       "regMark": "REG-PETG-02",
@@ -598,7 +598,7 @@
       "category": "Wrap-Around Labels",
       "title": "BOPP Wrap-Around Labels",
       "description": "High-speed roll-fed BOPP wrap-around labels with superior water/scuff resistance, ideal for mineral water and carbonated drinks.",
-      "image": "http://localhost:5000/uploads/bopp-1790059786359-327994.webp",
+      "image": "/uploads/bopp-1790059786359-327994.webp",
       "accentColor": "#ffd400",
       "dim": "Roll Format / Cut-and-Stack",
       "regMark": "REG-BOPP-03",
@@ -636,7 +636,7 @@
       "category": "Heat Transfer Labels",
       "title": "Heat Transfer Labels (HTL)",
       "description": "Dry-fusion decoration labels that permanently bond graphics to plastic containers, creating a seamless, scratch-proof 'no-label' look.",
-      "image": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790059811237-190474.jpeg",
+      "image": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790059811237-190474.jpeg",
       "accentColor": "#111111",
       "dim": "Custom Fusion Profile",
       "regMark": "REG-HTL-04",
@@ -674,7 +674,7 @@
       "category": "Shrink Film",
       "title": "Plain PVC Shrink Film",
       "description": "Premium unprinted PVC shrink film rolls for manual or automated wrapping, offering superior clarity, uniform shrinkage, and strong seals.",
-      "image": "http://localhost:5000/uploads/plain_pvc-1790059866645-384544.webp",
+      "image": "/uploads/plain_pvc-1790059866645-384544.webp",
       "accentColor": "#4f46e5",
       "dim": "Custom Roll Width & Length",
       "regMark": "REG-PVC-05",
@@ -715,9 +715,9 @@
       "videoSrc": "/videos/video-3.mp4",
       "ctaText": "Get a Quote",
       "ctaLink": "/contact",
-      "image1": "http://localhost:5000/uploads/printing_machine-1790059952713-165653.png",
-      "image2": "http://localhost:5000/uploads/bopp-1790062178129-211793.webp",
-      "image3": "http://localhost:5000/uploads/pvc_srink-1790060003259-926634.png"
+      "image1": "/uploads/printing_machine-1790059952713-165653.png",
+      "image2": "/uploads/bopp-1790062178129-211793.webp",
+      "image3": "/uploads/pvc_srink-1790060003259-926634.png"
     },
     "whoWeAre": {
       "subtitle": "WHO WE ARE",
@@ -750,7 +750,7 @@
       "title": "Meet Our",
       "titleHighlight": "Founders",
       "description": "Driven by technical innovation and an unwavering commitment to packaging excellence.",
-      "image": "http://localhost:5000/uploads/founder-1790067252859-913783.webp",
+      "image": "/uploads/founder-1790067252859-913783.webp",
       "badgeText": "FOUNDERS & DIRECTORS",
       "foundersList": [
         {
@@ -814,9 +814,9 @@
       "title": "Packaging & Label Solutions",
       "titleHighlight": "For Every Industry",
       "description": "Precision-engineered labels and shrink sleeves designed for durability, visual impact, and seamless application across high-speed commercial production lines.",
-      "image1": "http://localhost:5000/uploads/high-1790069228644-700263.png",
-      "image2": "http://localhost:5000/uploads/pvc_srink-1790069250122-629555.png",
-      "image3": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069304253-743904.jpeg",
+      "image1": "/uploads/high-1790069228644-700263.png",
+      "image2": "/uploads/pvc_srink-1790069250122-629555.png",
+      "image3": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069304253-743904.jpeg",
       "mockups": [
         {
           "tag": "BEVERAGE & FMCG SOLUTIONS",
@@ -826,7 +826,7 @@
           "title": "High-Speed Roll-Fed & Shrink Packaging",
           "text": "Waterproof, scuff-proof & high-tension rotary roll-fed application",
           "badge": "9-Color Gravure",
-          "photo": "http://localhost:5000/uploads/high-1790069228644-700263.png"
+          "photo": "/uploads/high-1790069228644-700263.png"
         },
         {
           "tag": "360° SHRINK SLEEVES",
@@ -836,7 +836,7 @@
           "title": "PVC & PETG Sleeves",
           "text": "58% to 78% high-contour heat shrink fit for bottles and jars",
           "badge": "360° Fit",
-          "photo": "http://localhost:5000/uploads/pvc_srink-1790069250122-629555.png"
+          "photo": "/uploads/pvc_srink-1790069250122-629555.png"
         },
         {
           "tag": "HEAT TRANSFER (HTL)",
@@ -846,7 +846,7 @@
           "title": "Heat Transfer Labels",
           "text": "Permanent molecular bond & scratch-proof finish",
           "badge": "Dry Fusion",
-          "photo": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069304253-743904.jpeg"
+          "photo": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069304253-743904.jpeg"
         }
       ]
     },
@@ -865,7 +865,7 @@
         "desc": "High-grade PVC shrink sleeve labels offering 360-degree graphics contouring for food, beverage, cosmetics, and household containers.",
         "badge": "360° Graphics",
         "accentColor": "#009fe3",
-        "photo": "http://localhost:5000/uploads/pvc_srink-1790069873045-724125.png",
+        "photo": "/uploads/pvc_srink-1790069873045-724125.png",
         "specs": [
           {
             "label": "Substrate",
@@ -894,7 +894,7 @@
         "desc": "Premium eco-friendly polyester shrink sleeves with maximum shrinkage percentage for highly contoured beverage and aerosol bottles.",
         "badge": "Eco Clarity",
         "accentColor": "#e3007b",
-        "photo": "http://localhost:5000/uploads/petg-1790069892602-610223.webp",
+        "photo": "/uploads/petg-1790069892602-610223.webp",
         "specs": [
           {
             "label": "Substrate",
@@ -923,7 +923,7 @@
         "desc": "High-speed roll-fed BOPP wrap-around labels with superior water and scuff resistance, ideal for mineral water and carbonated drinks.",
         "badge": "Waterproof",
         "accentColor": "#ffd400",
-        "photo": "http://localhost:5000/uploads/bopp-1790069907199-787658.webp",
+        "photo": "/uploads/bopp-1790069907199-787658.webp",
         "specs": [
           {
             "label": "Substrate",
@@ -952,7 +952,7 @@
         "desc": "Dry-fusion decoration labels that permanently bond graphics to plastic containers, creating a seamless, scratch-proof 'no-label' look.",
         "badge": "Dry Fusion",
         "accentColor": "#111111",
-        "photo": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069925494-649314.jpeg",
+        "photo": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790069925494-649314.jpeg",
         "specs": [
           {
             "label": "Carrier Film",
@@ -981,7 +981,7 @@
         "desc": "Premium unprinted PVC shrink film rolls for manual or automated wrapping, offering superior clarity, uniform shrinkage, and strong seals.",
         "badge": "Plain Film",
         "accentColor": "#4f46e5",
-        "photo": "http://localhost:5000/uploads/plain_pvc-1790069942709-885430.webp",
+        "photo": "/uploads/plain_pvc-1790069942709-885430.webp",
         "specs": [
           {
             "label": "Substrate",
@@ -1051,7 +1051,7 @@
         "subtitle": "Beverage Bottles & Liquid Containers",
         "badge": "Full Body Branding",
         "accentColor": "#009fe3",
-        "photo": "http://localhost:5000/uploads/pvc_srink-1790070404819-122312.png",
+        "photo": "/uploads/pvc_srink-1790070404819-122312.png",
         "containerType": "PET, Glass & HDPE Bottles",
         "uses": [
           "Mineral Water & Soda Bottles",
@@ -1147,7 +1147,7 @@
         "subtitle": "Cosmetics, Personal Care & Luxury Jars",
         "badge": "Seamless Fusion",
         "accentColor": "#e3007b",
-        "photo": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790070503500-22034.jpeg",
+        "photo": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790070503500-22034.jpeg",
         "containerType": "PP, PE, Acrylic & Glass Jars",
         "uses": [
           "Face Cream & Skin Lotion Jars",
@@ -1195,7 +1195,7 @@
         "subtitle": "Pharma Vials, Syringes & Vaccine Bottles",
         "badge": "Healthcare Grade",
         "accentColor": "#10b981",
-        "photo": "http://localhost:5000/uploads/petg-1790070521355-700410.webp",
+        "photo": "/uploads/petg-1790070521355-700410.webp",
         "containerType": "Glass Vials, PET Syrup Bottles & Syringes",
         "uses": [
           "Vaccine Vials & Injectable Syringes",
@@ -1243,7 +1243,7 @@
         "subtitle": "Industrial Drums, Oil Cans & Agrochemical Jugs",
         "badge": "Industrial Duty",
         "accentColor": "#f59e0b",
-        "photo": "http://localhost:5000/uploads/plain_pvc-1790070535797-205708.webp",
+        "photo": "/uploads/plain_pvc-1790070535797-205708.webp",
         "containerType": "HDPE Jerricans, Drums & Lubricant Cans",
         "uses": [
           "Motor Oil & Engine Lubricant Cans",
@@ -1291,7 +1291,7 @@
         "subtitle": "Personal Deodorants, Sprays & Metal Cans",
         "badge": "Metal Can Branding",
         "accentColor": "#8b5cf6",
-        "photo": "http://localhost:5000/uploads/bopp-1790070576260-146295.webp",
+        "photo": "/uploads/bopp-1790070576260-146295.webp",
         "containerType": "Aluminum Cans & Tinplate Aerosols",
         "uses": [
           "Body Sprays & Deodorant Cans",
@@ -1344,7 +1344,7 @@
         "desc": "Vibrant, full-body graphics that conform perfectly to complex container geometries without distortion.",
         "metric": "360-degree coverage",
         "accent": "#009fe3",
-        "photo": "http://localhost:5000/uploads/pvc_srink-1790070998694-881510.png"
+        "photo": "/uploads/pvc_srink-1790070998694-881510.png"
       },
       {
         "id": "petg-shrink-sleeves",
@@ -1352,7 +1352,7 @@
         "desc": "Ultra-clear polyester films offering extreme shrinkage profiles and minimal carbon footprint for sustainability.",
         "metric": "100% Recyclable Polyester",
         "accent": "#e3007b",
-        "photo": "http://localhost:5000/uploads/petg-1790071011048-288198.webp"
+        "photo": "/uploads/petg-1790071011048-288198.webp"
       },
       {
         "id": "bopp-wrap-around-labels",
@@ -1360,7 +1360,7 @@
         "desc": "Tensile-strength biaxially-oriented polypropylene roll-fed labels designed for seamless high-speed Hot-Melt labeling lines.",
         "metric": "Zero-tear rotary speed",
         "accent": "#ffd400",
-        "photo": "http://localhost:5000/uploads/high-1790071057812-365347.png"
+        "photo": "/uploads/high-1790071057812-365347.png"
       },
       {
         "id": "heat-transfer-labels",
@@ -1368,7 +1368,7 @@
         "desc": "Direct decoration fused into plastic packaging with heat and pressure, leaving no sticky residue or label edges.",
         "metric": "Chemical & scratch-proof",
         "accent": "#111111",
-        "photo": "http://localhost:5000/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790071079463-456794.jpeg"
+        "photo": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790071079463-456794.jpeg"
       },
       {
         "id": "plain-pvc-shrink-film",
@@ -1376,7 +1376,7 @@
         "desc": "Super-clear unprinted PVC shrink films offering high dust/humidity protection and low-temperature uniform shrinkage.",
         "metric": "High-speed wrap stability",
         "accent": "#4f46e5",
-        "photo": "http://localhost:5000/uploads/plain_pvc-1790071099452-42364.webp"
+        "photo": "/uploads/plain_pvc-1790071099452-42364.webp"
       }
     ],
     "whyChooseHeader": {

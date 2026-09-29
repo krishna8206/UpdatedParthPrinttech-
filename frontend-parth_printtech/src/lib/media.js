@@ -6,21 +6,28 @@ const BACKEND_BASE = (
 
 /**
  * Normalizes an image or video URL:
- * - Rewrites any legacy 'http://localhost:5000' URLs to the live backend URL
- * - Prefixes relative '/uploads/...' paths with the live backend base
+ * - Rewrites any legacy 'http://localhost:5000' URLs
+ * - Leaves Cloudinary & external URLs intact (https://...)
+ * - Serves bundled '/uploads/...' directly from frontend public assets for instant loading
  * - Leaves local static assets ('/videos/...', '/images/...', '/logo/...') intact
- * - Leaves absolute external URLs (https://...) intact
  */
 export function getMediaUrl(src, fallback = '') {
   if (!src || typeof src !== 'string' || !src.trim()) return fallback;
   const clean = src.trim();
 
-  if (clean.includes('localhost:5000')) {
-    return clean.replace(/https?:\/\/localhost:5000/gi, BACKEND_BASE);
+  // 1. Cloudinary or absolute external URLs: return as-is
+  if (clean.startsWith('https://') || (clean.startsWith('http://') && !clean.includes('localhost:5000'))) {
+    return clean;
   }
 
+  // 2. Normalize any legacy localhost:5000 paths to relative paths
+  if (clean.includes('localhost:5000/uploads/')) {
+    return clean.replace(/https?:\/\/localhost:5000/gi, '');
+  }
+
+  // 3. Relative uploads: served directly from public/uploads with zero latency
   if (clean.startsWith('/uploads/')) {
-    return `${BACKEND_BASE}${clean}`;
+    return clean;
   }
 
   return clean;
@@ -29,3 +36,4 @@ export function getMediaUrl(src, fallback = '') {
 export function getBackendBase() {
   return BACKEND_BASE;
 }
+

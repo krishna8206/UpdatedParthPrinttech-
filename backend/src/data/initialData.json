@@ -503,16 +503,16 @@
   },
   "about": {
     "hero": {
-      "image1": "http://localhost:5000/uploads/printing_machine-1790059952713-165653.png",
+      "image1": "/uploads/printing_machine-1790059952713-165653.png",
       "image2": "/images/products/bopp_label.png",
-      "image3": "http://localhost:5000/uploads/pvc_srink-1790060003259-926634.png"
+      "image3": "/uploads/pvc_srink-1790060003259-926634.png"
     },
     "founders": {
       "subtitle": "LEADERSHIP & VISION",
       "title": "Meet Our",
       "titleHighlight": "Founders",
       "description": "Driven by technical innovation and an unwavering commitment to packaging excellence.",
-      "image": "http://localhost:5000/uploads/founder-1790063391846-225247.webp",
+      "image": "/uploads/founder-1790063391846-225247.webp",
       "badgeText": "FOUNDERS & DIRECTORS",
       "foundersList": [
         {

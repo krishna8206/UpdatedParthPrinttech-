@@ -224,10 +224,12 @@ const MarketsWeServe = ({ data }) => {
           : typeof item.products === "string"
           ? item.products.split(",").map((s) => s.trim()).filter(Boolean)
           : fallback?.products || [];
+        const fallbackImg = fallback?.image || "/images/products/pvc_shrink_sleeves.png";
         return {
           ...item,
           products,
-          image: item.image || item.photo || fallback?.image || "/images/products/pvc_shrink_sleeves.png",
+          fallbackImage: fallbackImg,
+          image: item.image || item.photo || fallbackImg,
           accentColor: item.accentColor || fallback?.accentColor || "#009fe3"
         };
       })
@@ -315,12 +317,15 @@ const MarketsWeServe = ({ data }) => {
                 {/* Packaging / Product Image Showcase */}
                 <div className={styles.imageContainer}>
                   <img
-                    src={resolveMedia(market.image, "/images/products/pvc_shrink_sleeves.png")}
+                    src={resolveMedia(market.image, market.fallbackImage || "/images/products/pvc_shrink_sleeves.png")}
                     alt={market.title}
                     className={styles.marketImage}
                     loading="lazy"
                     onError={(e) => {
-                      e.currentTarget.src = "/images/products/pvc_shrink_sleeves.png";
+                      const targetFallback = market.fallbackImage || "/images/products/pvc_shrink_sleeves.png";
+                      if (e.currentTarget.src !== targetFallback && !e.currentTarget.src.endsWith(targetFallback)) {
+                        e.currentTarget.src = targetFallback;
+                      }
                     }}
                   />
                 </div>

@@ -49,7 +49,10 @@ export default function FileUpload({
         const fullUrl = getMediaUrl(res.file.url);
         setPreview(fullUrl);
         if (onUploadComplete) {
-          onUploadComplete(fullUrl, res.file);
+          // Keep relative /uploads/... paths clean so localhost:5000 is never hardcoded in database
+          // If it's a Cloudinary URL (https://res.cloudinary.com/...), keep full secure cloud URL
+          const saveUrl = res.file.url.startsWith('/') ? res.file.url : (res.file.url.startsWith('http') ? res.file.url : fullUrl);
+          onUploadComplete(saveUrl, res.file);
         }
         toast.success(`Uploaded: ${file.name} (${formatFileSize(file.size)})`);
       }
