@@ -38,9 +38,11 @@ export function AuthProvider({ children }) {
     checkAuth();
   }, [checkAuth]);
 
-  const login = async (username, password) => {
+  const login = async (identifier, password) => {
     try {
-      const data = await api.login({ username, password });
+      const cleanId = (identifier || '').trim();
+      const cleanPass = (password || '').trim();
+      const data = await api.login({ email: cleanId, username: cleanId, password: cleanPass });
       if (data.success && data.token) {
         setAuthToken(data.token);
         setUser(data.user);
@@ -48,11 +50,13 @@ export function AuthProvider({ children }) {
       }
       return { success: false, message: data.message || 'Login failed' };
     } catch (err) {
-      // Local fallback for quick initial setup if backend starting
-      if (username === 'admin' && password === 'admin123') {
+      // Local fallback for quick access if backend is sleeping or starting
+      const cleanId = (identifier || '').trim().toLowerCase();
+      const cleanPass = (password || '').trim();
+      if ((cleanId === 'admin@gmail.com' || cleanId === 'admin') && cleanPass === 'admin123') {
         const dummyToken = 'admin_session_token_' + Date.now();
         setAuthToken(dummyToken);
-        setUser({ username: 'admin', name: 'Super Admin' });
+        setUser({ username: 'admin', email: 'admin@gmail.com', name: 'Super Admin' });
         return { success: true };
       }
       return { success: false, message: err.message || 'Login error' };

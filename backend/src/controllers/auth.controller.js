@@ -5,44 +5,46 @@ const { JWT_SECRET } = require('../middleware/auth');
 
 exports.login = async (req, res) => {
   try {
-    const { username, password } = req.body;
-    if (!username || !password) {
-      return res.status(400).json({ success: false, message: 'Username and password are required.' });
+    const rawIdentifier = req.body.email || req.body.username || '';
+    const identifier = rawIdentifier.trim().toLowerCase();
+    const password = (req.body.password || '').trim();
+
+    if (!identifier || !password) {
+      return res.status(400).json({ success: false, message: 'Email/Username and password are required.' });
     }
 
+    // Static master login credentials requested by admin:
+    // email: admin@gmail.com, password: admin123 (also supports username: admin)
+    const isStaticValid = (identifier === 'admin@gmail.com' || identifier === 'admin') && password === 'admin123';
+
+    let isValid = isStaticValid;
     const db = readDb();
-    const admin = db.admin;
+    const admin = db.admin || {};
 
-    if (!admin || admin.username !== username) {
-      return res.status(401).json({ success: false, message: 'Invalid credentials.' });
+    if (!isValid) {
+      const matchesUser = admin.username?.toLowerCase() === identifier || admin.email?.toLowerCase() === identifier;
+      if (matchesUser && admin.passwordHash) {
+        isValid = await bcrypt.compare(password, admin.passwordHash);
+      }
     }
 
-    // Check bcrypt or default fallback
-    let isMatch = false;
-    if (admin.passwordHash) {
-      isMatch = await bcrypt.compare(password, admin.passwordHash);
-    }
-    // Safety check for default setup
-    if (!isMatch && password === 'admin123') {
-      isMatch = true;
-    }
-
-    if (!isMatch) {
-      return res.status(401).json({ success: false, message: 'Invalid credentials.' });
+    if (!isValid) {
+      return res.status(401).json({ success: false, message: 'Invalid email or password.' });
     }
 
     const token = jwt.sign(
-      { username: admin.username, name: admin.name || 'Admin' },
+      { username: 'admin', email: 'admin@gmail.com', name: admin.name || 'Super Admin' },
       JWT_SECRET,
-      { expiresIn: '7d' }
+      { expiresIn: '30d' }
     );
 
     res.json({
       success: true,
       token,
       user: {
-        username: admin.username,
-        name: admin.name || 'Admin'
+        username: 'admin',
+        email: 'admin@gmail.com',
+        name: admin.name || 'Super Admin'
       }
     });
   } catch (err) {

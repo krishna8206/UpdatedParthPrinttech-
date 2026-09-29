@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
-import { Lock, User, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Lock, Mail, ArrowRight } from 'lucide-react';
 
 export default function LoginPage() {
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('admin123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { login } = useAuth();
   const toast = useToast();
@@ -19,12 +19,12 @@ export default function LoginPage() {
     setIsLoading(true);
 
     try {
-      const res = await login(username, password);
+      const res = await login(email, password);
       if (res.success) {
         toast.success('Welcome back, Admin!');
         router.push('/');
       } else {
-        toast.error(res.message || 'Invalid username or password');
+        toast.error(res.message || 'Invalid email or password');
       }
     } catch (err) {
       toast.error('An error occurred during login');
@@ -76,14 +76,14 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <User size={14} /> Username
+              <Mail size={14} /> Email Address
             </label>
             <input
-              type="text"
+              type="email"
               className="form-input"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter admin email"
               required
             />
           </div>
@@ -97,7 +97,7 @@ export default function LoginPage() {
               className="form-input"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
+              placeholder="Enter password"
               required
             />
           </div>
@@ -111,11 +111,6 @@ export default function LoginPage() {
             {isLoading ? 'Signing In...' : 'Sign In to Dashboard'} <ArrowRight size={16} />
           </button>
         </form>
-
-        <div style={{ marginTop: '24px', padding: '12px', background: '#f8fafc', borderRadius: '8px', border: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '12px', color: 'var(--text-muted)' }}>
-          <ShieldCheck size={16} color="#009fe3" />
-          <span>Default credentials: <b>admin</b> / <b>admin123</b></span>
-        </div>
       </div>
     </div>
   );

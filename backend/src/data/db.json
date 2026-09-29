@@ -67,7 +67,7 @@
         "isActive": true
       }
     ],
-    "heroVideo": "/uploads/0918_2___1_-1790075769864-171367.mp4",
+    "heroVideo": "https://res.cloudinary.com/oeqdmjr7/video/upload/v1790676605/parth_printtech/0918_2_-1790676592879-103731_uhmae5.mp4",
     "whoWeAre": {
       "subheading": "WHO WE ARE",
       "headingLine1": "High-Speed",
@@ -150,7 +150,7 @@
           "id": "family-care",
           "title": "Family Care",
           "description": "Moisture-resistant label solutions, wrap-around films, and tamper-evident shrink bands for household essentials.",
-          "image": "/uploads/WhatsApp_Image_2026-09-28_at_3_14_25_PM__1_-1790591227634-97324.jpeg",
+          "image": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790678283/parth_printtech/WhatsApp_Image_2026-09-29_at_4_05_43_PM-1790678281980-184543_rgsz9p.jpg",
           "products": [
             "Detergent Labels",
             "Tamper Bands",
@@ -598,7 +598,7 @@
       "category": "Wrap-Around Labels",
       "title": "BOPP Wrap-Around Labels",
       "description": "High-speed roll-fed BOPP wrap-around labels with superior water/scuff resistance, ideal for mineral water and carbonated drinks.",
-      "image": "/uploads/bopp-1790059786359-327994.webp",
+      "image": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790676429/parth_printtech/WhatsApp_Image_2026-09-19_at_3_43_42_PM-1790676428065-610975_hzmp8r.jpg",
       "accentColor": "#ffd400",
       "dim": "Roll Format / Cut-and-Stack",
       "regMark": "REG-BOPP-03",
@@ -716,7 +716,7 @@
       "ctaText": "Get a Quote",
       "ctaLink": "/contact",
       "image1": "/uploads/printing_machine-1790059952713-165653.png",
-      "image2": "/uploads/bopp-1790062178129-211793.webp",
+      "image2": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790676874/parth_printtech/WhatsApp_Image_2026-09-28_at_4_03_39_PM-1790676873044-70241_ri9yqg.jpg",
       "image3": "/uploads/pvc_srink-1790060003259-926634.png"
     },
     "whoWeAre": {
@@ -923,7 +923,7 @@
         "desc": "High-speed roll-fed BOPP wrap-around labels with superior water and scuff resistance, ideal for mineral water and carbonated drinks.",
         "badge": "Waterproof",
         "accentColor": "#ffd400",
-        "photo": "/uploads/bopp-1790069907199-787658.webp",
+        "photo": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790676930/parth_printtech/WhatsApp_Image_2026-09-19_at_3_43_42_PM-1790676929826-629930_plvyne.jpg",
         "specs": [
           {
             "label": "Substrate",
@@ -1147,7 +1147,7 @@
         "subtitle": "Cosmetics, Personal Care & Luxury Jars",
         "badge": "Seamless Fusion",
         "accentColor": "#e3007b",
-        "photo": "/uploads/WhatsApp_Image_2026-09-22_at_11_27_28_AM-1790070503500-22034.jpeg",
+        "photo": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790678446/parth_printtech/WhatsApp_Image_2026-09-29_at_4_05_44_PM-1790678445422-805686_s9fvch.jpg",
         "containerType": "PP, PE, Acrylic & Glass Jars",
         "uses": [
           "Face Cream & Skin Lotion Jars",
@@ -1195,7 +1195,7 @@
         "subtitle": "Pharma Vials, Syringes & Vaccine Bottles",
         "badge": "Healthcare Grade",
         "accentColor": "#10b981",
-        "photo": "/uploads/petg-1790070521355-700410.webp",
+        "photo": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790678494/parth_printtech/WhatsApp_Image_2026-09-29_at_4_05_44_PM__1_-1790678493864-324897_cqbrwe.jpg",
         "containerType": "Glass Vials, PET Syrup Bottles & Syringes",
         "uses": [
           "Vaccine Vials & Injectable Syringes",
@@ -1243,7 +1243,7 @@
         "subtitle": "Industrial Drums, Oil Cans & Agrochemical Jugs",
         "badge": "Industrial Duty",
         "accentColor": "#f59e0b",
-        "photo": "/uploads/plain_pvc-1790070535797-205708.webp",
+        "photo": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790678556/parth_printtech/WhatsApp_Image_2026-09-29_at_4_05_44_PM__2_-1790678555708-254312_mnbszz.jpg",
         "containerType": "HDPE Jerricans, Drums & Lubricant Cans",
         "uses": [
           "Motor Oil & Engine Lubricant Cans",
@@ -1291,7 +1291,7 @@
         "subtitle": "Personal Deodorants, Sprays & Metal Cans",
         "badge": "Metal Can Branding",
         "accentColor": "#8b5cf6",
-        "photo": "/uploads/bopp-1790070576260-146295.webp",
+        "photo": "https://res.cloudinary.com/oeqdmjr7/image/upload/v1790678670/parth_printtech/WhatsApp_Image_2026-09-29_at_4_14_06_PM-1790678670192-658337_f2tb6e.jpg",
         "containerType": "Aluminum Cans & Tinplate Aerosols",
         "uses": [
           "Body Sprays & Deodorant Cans",
